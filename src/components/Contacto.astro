@@ -1,0 +1,16 @@
+---
+import ClipboardComponent from "./Clipboard";
+---
+<div class="flex flex-col items-center gap-4 bg-gradient-to-tr from-redWeb-500 via-pink-600 to-redWeb-300 bg-[length:200%_200%] animate-gradient-border rounded-lg p-1 m-4 sm:m-6 md:m-8 lg:m-10">
+    <div class="flex flex-col items-center gap-4 py-6 px-6 sm:py-7 sm:px-14 md:py-8 md:px-20 lg:py-9 lg:px-28 bg-slate-50 dark:bg-redWeb-300 border border-transparent rounded-lg">
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-center text-redWeb-300 dark:text-redWeb-100 [&>strong]:text-redWeb-400">
+            Disponibilidad para <strong>Crear</strong>
+        </h2>
+        <h3 class="text-base sm:text-lg md:text-xl text-center text-redWeb-300 dark:text-redWeb-100 [&>strong]:text-redWeb-400 pb-6 sm:pb-7 md:pb-8 lg:pb-9">
+            Estoy abierto a nuevas oportunidades y proyectos. Si tienes alguna solicitud o deseas saber más sobre mi trabajo, no dudes en ponerte en contacto.
+        </h3>
+        <div>
+            <ClipboardComponent client:load />
+        </div>
+    </div>
+</div>

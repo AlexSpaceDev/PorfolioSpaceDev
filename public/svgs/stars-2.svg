@@ -1,0 +1,15 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="30" cy="40" r="0.6"/>
+    <circle cx="90" cy="100" r="0.8"/>
+    <circle cx="200" cy="60" r="0.5"/>
+    <circle cx="260" cy="140" r="0.6"/>
+    <circle cx="70" cy="250" r="0.7"/>
+  </g>
+  <g fill="#ffffff">
+    <path d="M0 -1 L0 1 M-1 0 L1 0" transform="translate(120,40) rotate(20) scale(1.5)"/>
+    <path d="M0 -1 L0 1 M-1 0 L1 0" transform="translate(230,90) rotate(-30) scale(1.2)"/>
+    <path d="M0 -1 L0 1 M-1 0 L1 0" transform="translate(80,180) rotate(15) scale(1.0)"/>
+    <path d="M0 -1 L0 1 M-1 0 L1 0" transform="translate(170,220) rotate(45) scale(1.8)"/>
+  </g>
+</svg>

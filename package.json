@@ -1,0 +1,25 @@
+{
+  "name": "alexdevspace-me",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/tailwind": "^5.1.1",
+    "@fontsource-variable/orbitron": "^5.1.0",
+    "@fontsource-variable/rubik": "^5.1.0",
+    "@fontsource/kodchasan": "^5.2.5",
+    "astro": "^5.7.5",
+    "preact": "^10.24.1",
+    "swiper": "^11.2.7",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
+  }
+}
