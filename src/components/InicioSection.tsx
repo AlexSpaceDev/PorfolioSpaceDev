@@ -65,7 +65,7 @@ export default function InicioSection() {
   return (
     <>
       {/* Contenedor principal */}
-      <div class="flex lg:flex-row flex-col items-center gap-x-14 gap-y-14 max-w-7xl mx-auto">
+      <div class="flex lg:flex-row flex-col items-center gap-x-40 gap-y-14 max-w-7xl mx-auto">
         {/* Texto y redes */}
         <div class="flex flex-col items-center text-center max-w-[600px] w-full">
           <h2 class="lg:text-2xl text-xl text-wrap pb-4 lg:pb-2">
@@ -86,108 +86,83 @@ export default function InicioSection() {
           </nav>
         </div>
 
-        {/* Nubes clickeables - escritorio */}
-        <div class="hidden lg:grid grid-cols-[minmax(240px,1fr)_minmax(240px,1fr)] grid-rows-[auto_auto] gap-y-24 gap-x-10 w-full">
-          <div class="relative flex justify-center cursor-pointer" onClick={() => handleSectionChange('web')}>
-            <div class="absolute top-1/2 left-1/2 w-[260px] -translate-x-1/2 -translate-y-1/2 z-0">
-              <img src="/pictures/nubeWeb.png" alt="Nube decorativa" class="w-60 animate-float" />
-            </div>
-            <img src="/pictures/TextWeb.png" alt="Texto Web" class={`relative z-10 w-[180px] h-full hover:hue-rotate-[-94deg] hover:brightness-125 transition duration-300 drop-shadow-custom-black ${activeSection === 'web' ? 'brightness-[1000%] saturation-0 hover:brightness-[1000%] drop-shadow-custom-prueba' : ''}`} />
-          </div>
-
-          <div class="relative flex justify-center">
-            <div class="absolute top-1/2 left-1/2 w-[260px] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
-              <img src="/pictures/nubeApps.png" alt="Nube decorativa" class="w-auto animate-float-slow2" />
-            </div>
-            <img src="/pictures/TextSoon.png" alt="Texto Apps" class="relative z-10 w-[220px] drop-shadow-custom-black" />
-          </div>
-
-          <div class="relative lg:col-span-2 flex justify-center cursor-pointer" onClick={() => handleSectionChange('games')}>
-            <div class="absolute top-1/2 left-1/2 w-[260px] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
-              <img src="/pictures/nubeGames.png" alt="Nube decorativa" class="w-auto animate-float-slow" />
-            </div>
-            <img src="/pictures/TextGames.png" alt="Texto Games" class={`relative z-10 w-72 transition duration-300 drop-shadow-custom-black hover:hue-rotate-[-94deg] hover:brightness-125 ${activeSection === 'games' ? 'brightness-[1000%] hover:brightness-[1000%] saturation-0 drop-shadow-custom-prueba' : ''}`} />
+       {/* Nube única con flechas */}
+<div class="flex-1 relative flex justify-center">
+  <div class="flex items-center justify-center w-full max-w-[380px] h-[200px] lg:h-[260px] relative">
+    {/* Swiper */}
+    <div
+      ref={swiperRef}
+      class="swiper default-carousel swiper-container w-[320px] lg:w-[360px] overflow-visible mx-auto relative"
+    >
+      <div class="swiper-wrapper">
+        {/* Web Slide */}
+        <div class="swiper-slide">
+          <div class="relative w-[320px] lg:w-[360px] h-[180px] lg:h-[220px] flex items-center justify-center overflow-visible">
+            <img src="/pictures/nubeWeb.png" alt="Nube Web"
+                 class="w-[290px] h-[150px] lg:w-[340px] lg:h-[180px] animate-float object-contain" />
+            <img src="/pictures/TextWeb.png" alt="Texto Web"
+                 class="absolute left-1/2 top-1/2 z-10 w-[190px] lg:w-[200px] drop-shadow-custom-black -translate-x-1/2 -translate-y-1/2 object-contain" />
           </div>
         </div>
-
-        {/* Nube única con flechas - móviles */}
-        <div class="lg:hidden w-full relative">
-          <div class="flex items-center justify-between w-full h-[180px]">
-            {/* Left Arrow */}
-            <button
-              type="button"
-              class="group flex justify-center items-center absolute left-0 top-1/2 -translate-y-1/2 border border-solid border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10"
-              aria-label="Anterior"
-              tabIndex={0}
-              onClick={() => swiperInstance.current?.slidePrev()}
-            >
-              <ArrowLeft class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
-            </button>
-
-            {/* Swiper */}
-            <div ref={swiperRef} class="swiper default-carousel swiper-container w-[320px] overflow-visible mx-auto">
-              <div class="swiper-wrapper">
-                {/* Web Slide */}
-                <div class="swiper-slide">
-                  <div class="relative w-[320px] h-[180px] flex items-center justify-center overflow-visible">
-                    <img
-                      src="/pictures/nubeWeb.png"
-                      alt="Nube Web"
-                      class="w-[290px] h-[150px] animate-float"
-                      style={{ objectFit: 'contain' }}
-                    />
-                    <img
-                      src="/pictures/TextWeb.png"
-                      alt="Texto Web"
-                      class="absolute left-1/2 top-1/2 z-10 w-[190px] h-[55px] drop-shadow-custom-black -translate-x-1/2 -translate-y-1/2"
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                </div>
-                {/* Games Slide */}
-                <div class="swiper-slide">
-                  <div class="relative w-[320px] h-[180px] flex items-center justify-center overflow-visible">
-                    <img
-                      src="/pictures/nubeGames.png"
-                      alt="Nube Games"
-                      class="w-[290px] h-[150px] animate-float-slow"
-                      style={{ objectFit: 'contain' }}
-                    />
-                    <img
-                      src="/pictures/TextGames.png"
-                      alt="Texto Games"
-                      class="absolute left-1/2 top-1/2 z-10 w-[230px] h-[70px] drop-shadow-custom-black -translate-x-1/2 -translate-y-1/2"
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination !bottom-2"></div>
-            </div>
-
-            {/* Right Arrow */}
-            <button
-              type="button"
-              class="group flex justify-center items-center absolute right-0 top-1/2 -translate-y-1/2 border border-solid border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10"
-              aria-label="Siguiente"
-              tabIndex={0}
-              onClick={() => swiperInstance.current?.slideNext()}
-            >
-              <ArrowRight class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
-            </button>
+        {/* Games Slide */}
+        <div class="swiper-slide">
+          <div class="relative w-[320px] lg:w-[360px] h-[180px] lg:h-[220px] flex items-center justify-center overflow-visible">
+            <img src="/pictures/nubeGames.png" alt="Nube Games"
+                 class="w-[290px] h-[150px] lg:w-[340px] lg:h-[180px] animate-float-slow object-contain" />
+            <img src="/pictures/TextGames.png" alt="Texto Games"
+                 class="absolute left-1/2 top-1/2 z-10 w-[230px] lg:w-[300px] drop-shadow-custom-black -translate-x-1/2 -translate-y-1/2 object-contain" />
           </div>
         </div>
+      </div>
+
+      <div class="swiper-pagination !bottom-2"></div>
+
+      {/* Flechas internas (móvil) */}
+      <button type="button"
+        class="group flex justify-center items-center absolute left-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10 block lg:hidden"
+        aria-label="Anterior" onClick={() => swiperInstance.current?.slidePrev()}>
+        <ArrowLeft class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
+      </button>
+      <button type="button"
+        class="group flex justify-center items-center absolute right-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10 block lg:hidden"
+        aria-label="Siguiente" onClick={() => swiperInstance.current?.slideNext()}>
+        <ArrowRight class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
+      </button>
+    </div>
+
+    {/* Flechas externas (solo desktop) — ahora ancladas al wrapper */}
+    <button
+      type="button"
+      class="group hidden lg:flex justify-center items-center absolute left-0 top-1/2 -translate-x-[70%] -translate-y-1/2 border border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 bg-white z-10"
+      aria-label="Anterior"
+      onClick={() => swiperInstance.current?.slidePrev()}
+    >
+      <ArrowLeft class="w-6 h-6 text-SpacePalette-300 group-hover:text-white" />
+    </button>
+
+    <button
+      type="button"
+      class="group hidden lg:flex justify-center items-center absolute right-0 top-1/2 translate-x-[70%] -translate-y-1/2 border border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 bg-white z-10"
+      aria-label="Siguiente"
+      onClick={() => swiperInstance.current?.slideNext()}
+    >
+      <ArrowRight class="w-6 h-6 text-SpacePalette-300 group-hover:text-white" />
+    </button>
+  </div>
+</div>
+
+
       </div>
 
       {/* Título de habilidades */}
-      <div class="flex justify-center pt-20 lg:pt-40">
+      {/*<div class="flex justify-center pt-20 lg:pt-40">
         <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
           Habilidades
         </h2>
-      </div>
+      </div>*/}
 
       {/* Íconos dinámicos con animación de entrada/salida */}
-      <div class="flex items-center justify-center pt-10">
+      <div class="flex items-center justify-center py-10 lg:pt-24 lg:pb-10">
         <div class="w-full max-w-7xl px-6 relative min-h-[250px] overflow-hidden">
           {/* Salida */}
           {isTransitioning && prevSection && (

@@ -20,14 +20,14 @@ import Clipboard from '../components/Clipboard';
     </SectionContainer>
     
     <!-- Inicio -->
-    <SectionContainer id="inicio" class="lg:pt-8 lg:pb-10 py-16 gap-x-14 gap-y-24">
+    <SectionContainer id="inicio" class="py-16 gap-x-14 gap-y-24">
       <InicioSection client:load />
     </SectionContainer>
 
     <!-- Proyectos -->
-    <SectionContainer id="proyectos" class="lg:py-24 py-16">
+    <SectionContainer id="proyectos" class="py-16">
       <div class="flex justify-center">
-        <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl pb-12">
+        <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl pb-12 lg:pt-10">
           Proyectos
         </h2>
       </div>
@@ -35,7 +35,7 @@ import Clipboard from '../components/Clipboard';
     </SectionContainer>
     
     <!-- Sobre mí -->
-    <SectionContainer id="sobre-mi" class="flex flex-col items-center justify-center lg:pt-8 lg:pb-10 py-16 gap-y-24">
+    <SectionContainer id="sobre-mi" class="flex flex-col items-center justify-center py-16 gap-y-24">
       <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
         Sobre Mí
       </h2>
@@ -55,29 +55,27 @@ import Clipboard from '../components/Clipboard';
       </div>
     </SectionContainer>
 
-	<SectionContainer 
-	id="contacto" 
-	bgClass="bg-black bg-opacity-60" 
-	class="lg:py-24 py-16 flex flex-col items-center gap-y-11"
-	>
-	<h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
-		Contacto
-	</h2>
-	<div class="flex flex-col justify-center gap-y-8">
-		<h3 class="text-base lg:text-xl text-center text-SpacePalette-200">
-		¿Tienes una idea, proyecto o colaboración en mente?
-		</h3>
-		<h3 class="text-base lg:text-xl text-center text-SpacePalette-200 [&>strong]:text-SpacePalette-600">
-		<strong>Lo imaginas, lo creamos</strong>, sea en desarrollo web, apps, videojuegos o cualquier experiencia interactiva que necesites.
-		Si quieres trabajar conmigo o saber más sobre mi trabajo, no dudes en escribirme.
-		</h3>
-	</div>
-	<Clipboard client:load />
-	</SectionContainer>
+    <!-- Contacto -->
+    <SectionContainer id="contacto" bgClass="bg-black bg-opacity-60" class="py-16 flex flex-col items-center gap-y-11">
+    <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
+      Contacto
+    </h2>
+    <div class="flex flex-col justify-center gap-y-8">
+      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200">
+      ¿Tienes una idea, proyecto o colaboración en mente?
+      </h3>
+      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200 [&>strong]:text-SpacePalette-600">
+      <strong>Lo imaginas, lo creamos</strong>, sea en desarrollo web, apps, videojuegos o cualquier experiencia interactiva que necesites.
+      Si quieres trabajar conmigo o saber más sobre mi trabajo, no dudes en escribirme.
+      </h3>
+    </div>
+    <Clipboard client:load />
+    </SectionContainer>
 
-	<SectionContainer bgClass="bg-black bg-opacity-60" class="pb-10">
-	<Footer />
-	</SectionContainer>
+    <!-- Footer -->
+    <SectionContainer bgClass="bg-black bg-opacity-60" class="pb-10">
+    <Footer />
+    </SectionContainer>
 
   </main>
 </Layout>

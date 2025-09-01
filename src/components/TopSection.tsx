@@ -60,7 +60,21 @@ export default function SectionTop() {
   const handleStartClick = () => {
     setCloudState('exit');
     setTimeout(() => {
-      document.getElementById('inicio')?.scrollIntoView({ behavior: 'smooth' });
+      const el = document.getElementById('inicio');
+      if (!el) return;
+
+      if (window.innerWidth >= 1024) {
+        // Desktop (lg en Tailwind = 1024px)
+        el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      } else {
+        // Móvil / tablets
+        el.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
     }, 500);
   };
 
