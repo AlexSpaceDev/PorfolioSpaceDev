@@ -70,8 +70,8 @@ export default function InicioSection() {
         <div class="flex flex-col items-center text-center max-w-[600px] w-full">
           <h2 class="lg:text-2xl text-xl text-wrap pb-4 lg:pb-2">
             <span class="text-SpacePalette-200">
-              Desarrollador apasionado por la tecnología. Creando soluciones de todo tipo, desde webs hasta videojuegos, para{' '}
-              <span class="text-green-400">impulsar tus proyectos al siguiente nivel.</span>
+              SpaceDev te permite crear y obtener soluciones de todo tipo enfocados en la {' '}<span class="text-green-400">programación</span>, desde sitios webs hasta videojuegos, lo necesario para impulsar tus proyectos al{' '}
+              <span class="text-green-400">siguiente nivel.</span>
             </span>
           </h2>
           <nav class="flex flex-wrap justify-center gap-4 lg:mt-4">
