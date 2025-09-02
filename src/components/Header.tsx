@@ -9,24 +9,26 @@ export default function Header() {
     const headerBg = headerBgRef.current;
     const navLinks = document.querySelectorAll('nav a');
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const targetId = link.getAttribute('href')?.substring(1);
-        if (!targetId) return;
-
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          const isMediumOrLarger = window.innerWidth >= 768;
-
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: isMediumOrLarger ? 'center' : 'start',
-          });
-        }
-      });
-    });
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    // Only intercept internal links (anchors)
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      if (!targetId) return;
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const isMediumOrLarger = window.innerWidth >= 768;
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: isMediumOrLarger ? 'center' : 'start',
+        });
+      }
+    }
+    // Otherwise, let the browser handle the link normally
+  });
+});
 
     const handleScroll = () => {
       if (!headerBg) return;
