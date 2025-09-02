@@ -86,7 +86,7 @@ export default function InicioSection() {
           </nav>
         </div>
 
-       {/* Nube única con flechas */}
+{/* Nube única con flechas */}
 <div class="flex-1 relative flex justify-center">
   <div class="flex items-center justify-center w-full max-w-[380px] h-[200px] lg:h-[260px] relative">
     {/* Swiper */}
@@ -119,12 +119,12 @@ export default function InicioSection() {
 
       {/* Flechas internas (móvil) */}
       <button type="button"
-        class="group flex justify-center items-center absolute left-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10 block lg:hidden"
+        class="group flex justify-center items-center absolute left-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10  lg:hidden"
         aria-label="Anterior" onClick={() => swiperInstance.current?.slidePrev()}>
         <ArrowLeft class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
       </button>
       <button type="button"
-        class="group flex justify-center items-center absolute right-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10 block lg:hidden"
+        class="group flex justify-center items-center absolute right-0 top-1/2 -translate-y-1/2 border border-indigo-600 w-9 h-9 transition-all duration-500 rounded-full hover:bg-indigo-600 mx-2 bg-white z-10  lg:hidden"
         aria-label="Siguiente" onClick={() => swiperInstance.current?.slideNext()}>
         <ArrowRight class="w-5 h-5 text-SpacePalette-300 group-hover:text-white" />
       </button>
@@ -150,6 +150,7 @@ export default function InicioSection() {
     </button>
   </div>
 </div>
+
 
 
       </div>
