@@ -52,7 +52,7 @@ export default function Header() {
           {/* Fondo ajustado con z-index */}
           <div
             ref={headerBgRef}
-            class="absolute -inset-x-4 z-0 rounded-full dark:bg-redWeb-300 bg-slate-900/80 opacity-0 transition-opacity duration-300 py-5"
+            class="absolute -inset-x-4 z-0 rounded-full bg-slate-900/80 opacity-0 transition-opacity duration-300 py-5"
           ></div>
 
           {/* Enlaces y ThemeIcon con z-index más alto */}

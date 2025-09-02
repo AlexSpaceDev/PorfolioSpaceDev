@@ -96,13 +96,13 @@ export default function Proyectos() {
                 title="Mibtsar.es"
                 description="Programador Front-End/Back-End y diseñador de la página web para la empresa Mibtsár. Creando una experiencia funcional y visualmente atractiva acorde a su identidad."
                 tags={[
-                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800 dark:bg-slate-900 dark:text-blue-100", icon: <WordPressIcon class="size-6" />},
-                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-100", icon: <HTMLIcon class="size-6" />},
-                  {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-100", icon: <CSSIcon class="size-6" />},
-                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100", icon: <JavaScriptIcon class="size-5" />},
-                  {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800 dark:bg-indigo-800 dark:text-indigo-100", icon: <PHPIcon class="size-5" />},
-                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-100", icon: <MySQLIcon class="size-5" />},
-                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800 dark:bg-pink-900 dark:text-pink-100", icon: <FigmaIcon class="size-5" />},
+                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800", icon: <WordPressIcon class="size-5" />},
+                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
+                  {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <CSSIcon class="size-5" />},
+                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
+                  {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800", icon: <PHPIcon class="size-5" />},
+                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800", icon: <MySQLIcon class="size-5" />},
+                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},
                 ]}        
               />
               <Cards 
@@ -110,13 +110,13 @@ export default function Proyectos() {
                 title="Spacedev.me"
                 description="Programador y diseñador de mi propio porfolio. Presentando las habilidades y experiencias adquiridas con múltiples tecnologías." 
                 tags={[
-                  {name: "Node.js", bgColor: "bg-lime-200 text-lime-800 dark:bg-lime-950 dark:text-lime-100", icon: <NodejsIcon class="size-5" />},
-                  {name: "Astro", bgColor: "bg-amber-200 text-amber-800 dark:bg-amber-900 dark:text-amber-100", icon: <AstroIcon class="size-5" />},
-                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-100", icon: <HTMLIcon class="size-6" />},
-                  {name: "TailwindCSS", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-100", icon: <TailwindCSSIcon class="size-6" />},
-                  {name: "TypeScript", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-100", icon: <TypeScriptIcon class="size-5" />},
-                  {name: "Preact", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-100", icon: <PreactIcon class="size-5" />},
-                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800 dark:bg-pink-900 dark:text-pink-100", icon: <FigmaIcon class="size-5" />},  
+                  {name: "Node.js", bgColor: "bg-lime-200 text-lime-800", icon: <NodejsIcon class="size-5" />},
+                  {name: "Astro", bgColor: "bg-amber-200 text-amber-800", icon: <AstroIcon class="size-5" />},
+                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
+                  {name: "TailwindCSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <TailwindCSSIcon class="size-5" />},
+                  {name: "TypeScript", bgColor: "bg-blue-100 text-blue-800", icon: <TypeScriptIcon class="size-5" />},
+                  {name: "Preact", bgColor: "bg-purple-100 text-purple-800", icon: <PreactIcon class="size-5" />},
+                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},  
                 ]}
               />
             </div>
@@ -129,8 +129,8 @@ export default function Proyectos() {
                 title="Trazando Pasos"
                 description="Programador del videojuego de realidad virtual Trazando Pasos, una experiencia que explora los desafíos de la migración. Este juego fue galardonado como el ganador del GameJam VRDay Latam 2022."
                 tags={[
-                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800 dark:bg-stone-900 dark:text-stone-100", icon: <UnrealIconB class="size-5" />},
-                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800 dark:bg-orange-900 dark:text-orange-100", icon: <VRIcon class="size-5" />},
+                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
+                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
                 ]}
               />
               <Cards 
@@ -138,8 +138,8 @@ export default function Proyectos() {
                 title="Plantain Feast"
                 description="Programador de Platain Feast, un juego de cocina en 2D para móviles que celebra la gastronomía ecuatoriana al presentar recetas tradicionales con el plátano como ingrediente principal."
                 tags={[
-                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800 dark:bg-stone-900 dark:text-stone-100", icon: <UnrealIconB class="size-5" />},
-                  {name: "2D", bgColor: "bg-yellow-200 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100", icon: <TwoDIcon class="size-5" />},
+                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
+                  {name: "2D", bgColor: "bg-yellow-200 text-yellow-800", icon: <TwoDIcon class="size-5" />},
                 ]}
               />
             </div>
@@ -152,10 +152,10 @@ export default function Proyectos() {
                 title="ALERTA!"
                 description="Desarrollador de realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, una exposición interactiva que usa códigos QR para explorar señales de alerta sobre salud mental mediante ilustraciones y animaciones."
                 tags={[
-                  {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-100", icon: <MetaSparkStudioIcon class="size-5" />},
-                  {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800 dark:bg-fuchsia-900 dark:text-fuchsia-100", icon: <LensStudioIcon class="size-5" />},
-                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100", icon: <JavaScriptIcon class="size-5" />},
-                  {name: "Realidad Aumentada", bgColor: "bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-100", icon: <ARIcon class="size-5" />},
+                  {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800", icon: <MetaSparkStudioIcon class="size-5" />},
+                  {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800", icon: <LensStudioIcon class="size-5" />},
+                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
+                  {name: "Realidad Aumentada", bgColor: "bg-red-200 text-red-800", icon: <ARIcon class="size-5" />},
 
                 ]}
               />
@@ -164,9 +164,9 @@ export default function Proyectos() {
                 title="Simulación Soldadura"
                 description="Programador de un simulador de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura, desde la vestimenta adecuada hasta el acabado final."
                 tags={[
-                  {name: "Unity", bgColor: "bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-gray-100", icon: <UnityIconB class="size-5" />},
-                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800 dark:bg-orange-900 dark:text-orange-100", icon: <VRIcon class="size-5" />},
-                  {name: "Csharp", bgColor: "bg-violet-200 text-violet-800 dark:bg-violet-900 dark:text-violet-100", icon: <CsharpIcon class="size-5" />},
+                  {name: "Unity", bgColor: "bg-gray-200 text-gray-800", icon: <UnityIconB class="size-5" />},
+                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
+                  {name: "Csharp", bgColor: "bg-violet-200 text-violet-800", icon: <CsharpIcon class="size-5" />},
                 ]}
               />
             </div>
@@ -192,13 +192,13 @@ export default function Proyectos() {
                 title="Mibtsar.es"
                 description="Programador Front-End/Back-End y diseñador de la página web para la empresa Mibtsár. Creando una experiencia funcional y visualmente atractiva acorde a su identidad."
                 tags={[
-                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800 dark:bg-slate-900 dark:text-blue-100", icon: <WordPressIcon class="size-6" />},
-                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-100", icon: <HTMLIcon class="size-6" />},
-                  {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-100", icon: <CSSIcon class="size-6" />},
-                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100", icon: <JavaScriptIcon class="size-5" />},
-                  {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800 dark:bg-indigo-800 dark:text-indigo-100", icon: <PHPIcon class="size-5" />},
-                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-100", icon: <MySQLIcon class="size-5" />},
-                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800 dark:bg-pink-900 dark:text-pink-100", icon: <FigmaIcon class="size-5" />},
+                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800", icon: <WordPressIcon class="size-5" />},
+                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
+                  {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <CSSIcon class="size-5" />},
+                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
+                  {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800", icon: <PHPIcon class="size-5" />},
+                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800", icon: <MySQLIcon class="size-5" />},
+                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},
                 ]}        
               />
               <Cards 
@@ -206,13 +206,13 @@ export default function Proyectos() {
                 title="Spacedev.me"
                 description="Programador y diseñador de mi propio porfolio. Presentando las habilidades y experiencias adquiridas con múltiples tecnologías." 
                 tags={[
-                  {name: "Node.js", bgColor: "bg-lime-200 text-lime-800 dark:bg-lime-950 dark:text-lime-100", icon: <NodejsIcon class="size-5" />},
-                  {name: "Astro", bgColor: "bg-amber-200 text-amber-800 dark:bg-amber-900 dark:text-amber-100", icon: <AstroIcon class="size-5" />},
-                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-100", icon: <HTMLIcon class="size-6" />},
-                  {name: "TailwindCSS", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-100", icon: <TailwindCSSIcon class="size-6" />},
-                  {name: "TypeScript", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-100", icon: <TypeScriptIcon class="size-5" />},
-                  {name: "Preact", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-100", icon: <PreactIcon class="size-5" />},
-                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800 dark:bg-pink-900 dark:text-pink-100", icon: <FigmaIcon class="size-5" />},  
+                  {name: "Node.js", bgColor: "bg-lime-200 text-lime-800", icon: <NodejsIcon class="size-5" />},
+                  {name: "Astro", bgColor: "bg-amber-200 text-amber-800", icon: <AstroIcon class="size-5" />},
+                  {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
+                  {name: "TailwindCSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <TailwindCSSIcon class="size-5" />},
+                  {name: "TypeScript", bgColor: "bg-blue-100 text-blue-800", icon: <TypeScriptIcon class="size-5" />},
+                  {name: "Preact", bgColor: "bg-purple-100 text-purple-800", icon: <PreactIcon class="size-5" />},
+                  {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},  
                 ]}
               />
             </div>
@@ -225,8 +225,8 @@ export default function Proyectos() {
                 title="Trazando Pasos"
                 description="Programador del videojuego de realidad virtual Trazando Pasos, una experiencia que explora los desafíos de la migración. Este juego fue galardonado como el ganador del GameJam VRDay Latam 2022."
                 tags={[
-                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800 dark:bg-stone-900 dark:text-stone-100", icon: <UnrealIconB class="size-5" />},
-                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800 dark:bg-orange-900 dark:text-orange-100", icon: <VRIcon class="size-5" />},
+                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
+                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
                 ]}
               />
               <Cards 
@@ -234,8 +234,8 @@ export default function Proyectos() {
                 title="Plantain Feast"
                 description="Programador de Platain Feast, un juego de cocina en 2D para móviles que celebra la gastronomía ecuatoriana al presentar recetas tradicionales con el plátano como ingrediente principal."
                 tags={[
-                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800 dark:bg-stone-900 dark:text-stone-100", icon: <UnrealIconB class="size-5" />},
-                  {name: "2D", bgColor: "bg-yellow-200 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100", icon: <TwoDIcon class="size-5" />},
+                  {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
+                  {name: "2D", bgColor: "bg-yellow-200 text-yellow-800", icon: <TwoDIcon class="size-5" />},
                 ]}
               />
             </div>
@@ -248,10 +248,10 @@ export default function Proyectos() {
                 title="ALERTA!"
                 description="Desarrollador de realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, una exposición interactiva que usa códigos QR para explorar señales de alerta sobre salud mental mediante ilustraciones y animaciones."
                 tags={[
-                  {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800 dark:bg-fuchsia-900 dark:text-fuchsia-100", icon: <MetaSparkStudioIcon class="size-5" />},
-                  {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800 dark:bg-fuchsia-900 dark:text-fuchsia-100", icon: <LensStudioIcon class="size-5" />},
-                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-100", icon: <JavaScriptIcon class="size-5" />},
-                  {name: "Realidad Aumentada", bgColor: "bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-100", icon: <ARIcon class="size-5" />},
+                  {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800", icon: <MetaSparkStudioIcon class="size-5" />},
+                  {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800", icon: <LensStudioIcon class="size-5" />},
+                  {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
+                  {name: "Realidad Aumentada", bgColor: "bg-red-200 text-red-800", icon: <ARIcon class="size-5" />},
 
                 ]}
               />
@@ -260,9 +260,9 @@ export default function Proyectos() {
                 title="Simulación Soldadura"
                 description="Programador de un simulador de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura, desde la vestimenta adecuada hasta el acabado final."
                 tags={[
-                  {name: "Unity", bgColor: "bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-gray-100", icon: <UnityIconB class="size-5" />},
-                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800 dark:bg-orange-900 dark:text-orange-100", icon: <VRIcon class="size-5" />},
-                  {name: "Csharp", bgColor: "bg-violet-200 text-violet-800 dark:bg-violet-900 dark:text-violet-100", icon: <CsharpIcon class="size-5" />},
+                  {name: "Unity", bgColor: "bg-gray-200 text-gray-800", icon: <UnityIconB class="size-5" />},
+                  {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
+                  {name: "Csharp", bgColor: "bg-violet-200 text-violet-800", icon: <CsharpIcon class="size-5" />},
                 ]}
               />
             </div>

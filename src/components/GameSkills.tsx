@@ -26,11 +26,11 @@ export default function GameSkills() {
           <span class="mt-1 text-white">C#</span>
         </li>
         <li class="flex flex-col items-center lg:text-base text-xs text-center">
-          <VisualStudioIcon class="lg:w-16 lg:h-16 w-10 h-10 lf:mt-2"/>
+          <VisualStudioIcon class="lg:w-20 lg:h-20 w-10 h-10 lg:mt-2"/>
           <span class="mt-1 text-white">Visual Studio</span>
         </li>
         <li class="flex flex-col items-center lg:text-base text-xs text-center">
-          <VisualStudioCodeIcon class="lg:w-16 lg:h-16 w-10 h-10 lg:mt-2"/>
+          <VisualStudioCodeIcon class="lg:w-20 lg:h-20 w-10 h-10 lg:mt-2"/>
           <span class="mt-1 text-white">VS Code</span>
         </li>
       </ul>
