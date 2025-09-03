@@ -9,7 +9,7 @@ export default function SectionTop() {
   const [hasScrolledDown, setHasScrolledDown] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  // Detectar si estamos en escritorio
+  // Detectar si estamos en escritorio (>=1720px)
   useEffect(() => {
     const checkSize = () => setIsDesktop(window.innerWidth >= 1024);
     checkSize();
@@ -64,13 +64,13 @@ export default function SectionTop() {
       if (!el) return;
 
       if (window.innerWidth >= 1024) {
-        // Desktop (lg en Tailwind = 1024px)
+        // Desktop real desde 1024px
         el.scrollIntoView({
           behavior: 'smooth',
           block: 'center',
         });
       } else {
-        // Móvil / tablets
+        // Móvil / tablets / pseudo-desktop
         el.scrollIntoView({
           behavior: 'smooth',
         });
@@ -85,7 +85,7 @@ export default function SectionTop() {
         key={isDesktop ? `cloud1-${animationKey}` : 'cloud1'}
         src="/pictures/cloud2.png"
         alt="Nube decorativa izquierda"
-        class={`absolute left-[100px] scale-x-[-1] top-52 w-auto opacity-0 z-10 pointer-events-none pt-20
+        class={`absolute left-[100px] scale-x-[-1] 3xl:top-52 2xl:top-48 xl:top-44 xlg:top-48 top-52 3xl:w-auto 2xl:w-[480px] xl:w-[400px] xlg:w-[350px] lg:w-[300px] w-auto opacity-0 z-10 pointer-events-none pt-20
           ${
             cloudState === 'exit'
               ? 'lg:animate-cloud1-exit animate-cloud-entry-mobile-reverse'
@@ -102,7 +102,7 @@ export default function SectionTop() {
         key={isDesktop ? `cloud2-${animationKey}` : 'cloud2'}
         src="/pictures/cloud2.png"
         alt="Nube decorativa derecha"
-        class={`absolute right-[100px] top-52 w-auto opacity-0 z-10 pointer-events-none pt-20
+        class={`absolute right-[100px] 3xl:top-52 2xl:top-48 xl:top-44 xlg:top-48 top-52 3xl:w-auto 2xl:w-[480px] xl:w-[400px] xlg:w-[350px] lg:w-[300px] w-auto opacity-0 z-10 pointer-events-none pt-20
           ${
             cloudState === 'exit'
               ? 'lg:animate-cloud2-exit animate-cloud-entry-mobile2-reverse'
@@ -116,7 +116,7 @@ export default function SectionTop() {
 
       {/* Logo */}
       <img
-        class={`mx-auto w-80 md:w-96 lg:w-3/6 drop-shadow-custom-white transition-all duration-1000 ease-out delay-200 ${
+        class={`mx-auto w-80 md:w-96 3xl:w-3/6 2xl:w-2/5 drop-shadow-custom-white transition-all duration-1000 ease-out delay-200 ${
           hasEntered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
         src="/logo/SpaceDevLogo.png"
@@ -125,7 +125,7 @@ export default function SectionTop() {
 
       {/* Slogan */}
       <h1
-        class={`text-xl lg:text-3xl text-SpacePalette-100 text-center transition-all duration-1000 ease-out delay-500 ${
+        class={`text-xl lg:text-lg text-SpacePalette-100 text-center transition-all duration-1000 ease-out delay-500 ${
           hasEntered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
@@ -146,3 +146,5 @@ export default function SectionTop() {
     </>
   );
 }
+
+

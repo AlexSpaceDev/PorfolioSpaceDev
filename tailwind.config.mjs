@@ -7,6 +7,8 @@ export default {
 			screens:{
 				'minmax': '550px',
 				'mobilel': '450px',
+				'xlg': '1170px',
+				'3xl':'1720px'
 			},
 
 			keyframes:{
