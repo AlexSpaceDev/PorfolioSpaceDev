@@ -65,7 +65,7 @@ navLinks.forEach(link => {
         </nav>
 
         {/* Botón para móvil */}
-        <div class="block lg:hidden">
+        <div class="block sm:hidden">
           <BotonHeader />
         </div>
       </div>
