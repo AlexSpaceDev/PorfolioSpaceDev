@@ -65,7 +65,7 @@ export default function InicioSection() {
   return (
     <>
       {/* Contenedor principal */}
-      <div class="flex lg:flex-row flex-col items-center gap-x-40 gap-y-14 max-w-7xl mx-auto">
+      <div class="flex lg:flex-row flex-col items-center xl:gap-x-40 gap-x-10 gap-y-14 max-w-7xl mx-auto">
         {/* Texto y redes */}
         <div class="flex flex-col items-center text-center max-w-[600px] w-full">
           <h2 class="lg:text-2xl text-xl text-wrap pb-4 lg:pb-2">
