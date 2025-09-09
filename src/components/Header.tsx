@@ -60,7 +60,7 @@ navLinks.forEach(link => {
           {/* Enlaces y ThemeIcon con z-index más alto */}
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#inicio">Inicio</a>
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#proyectos">Proyectos</a>
-          <a class="relative z-10 transition hover:text-SpacePalette-600" href="#sobre-mi">Sobre mí</a>
+          <a class="relative z-10 transition hover:text-SpacePalette-600" href="#nuestro-equipo">Nuestro Equipo</a>
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#contacto">Contacto</a>
         </nav>
 

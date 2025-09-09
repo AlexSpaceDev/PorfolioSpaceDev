@@ -43,7 +43,7 @@ const Sidebar: FunctionalComponent<SidebarProps> = ({ isOpen, onClose }) => {
       >
         <div className="p-4">
           <ul className="mt-24 space-y-6">
-            {[['#inicio', 'Inicio'], ['#proyectos', 'Proyectos'], ['#sobre-mi', 'Sobre mí'], ['#contacto', 'Contacto']].map(
+            {[['#inicio', 'Inicio'], ['#proyectos', 'Proyectos'], ['#nuestro-equipo', 'Nuestro Equipo'], ['#contacto', 'Contacto']].map(
               ([href, label]) => (
                 <li key={label} className="border-b-2 pb-2 border-redWeb-400">
                   <a href={href} className="block hover:text-redWeb-400">{label}</a>
