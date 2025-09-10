@@ -70,7 +70,7 @@ export default function InicioSection() {
         <div class="flex flex-col items-center text-center max-w-[600px] w-full">
           <h2 class="lg:text-2xl text-xl text-wrap pb-4 lg:pb-2">
             <span class="text-SpacePalette-200">
-              SpaceDev te permite crear y obtener soluciones de todo tipo enfocados en la {' '}<span class="text-green-400">programación</span>, desde sitios webs hasta videojuegos, lo necesario para impulsar tus proyectos al{' '}
+              En SpaceDev creamos y obtenemos soluciones de todo tipo, desde sitios webs hasta videojuegos, lo necesario para impulsar tus proyectos al{' '}
               <span class="text-green-400">siguiente nivel.</span>
             </span>
           </h2>
@@ -79,10 +79,11 @@ export default function InicioSection() {
               <Mail class="size-4 md:size-5" />
               spacedev.me@gmail.com
             </SocialPill>
+            {/*
             <SocialPill href="https://www.linkedin.com/in/alex-enriquez-91409b329/">
               <LinkedIn class="size-4 md:size-4.5" />
               LinkedIn
-            </SocialPill>
+            </SocialPill> */}
           </nav>
         </div>
 
