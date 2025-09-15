@@ -9,6 +9,7 @@ import NodejsIcon from "./icons/Nodejs";
 import PHPIcon from "./icons/PHP";
 import MySQLIcon from "./icons/MySQL";
 import WordPressIconW from "./iconsWhite/WordPressW";
+import JoomlaIcon from "./icons/joomla";
 import VisualStudioCodeIcon from "./icons/VisualStudioCode";
 
 export default function WebSkills() {
@@ -58,6 +59,10 @@ export default function WebSkills() {
         <li class="flex flex-col items-center lg:text-base text-xs">
           <WordPressIconW class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">WordPress</span>
+        </li>
+        <li class="flex flex-col items-center lg:text-base text-xs">
+          <JoomlaIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
+          <span class="mt-1 text-white">Joomla</span>
         </li>
         <li class="flex flex-col items-center lg:text-base text-xs text-center">
           <VisualStudioCodeIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2"/>

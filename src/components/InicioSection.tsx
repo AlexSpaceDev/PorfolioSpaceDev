@@ -155,7 +155,7 @@ export default function InicioSection() {
 
       {/* Íconos dinámicos con animación de entrada/salida */}
       <div class="flex items-center justify-center py-10 lg:pt-24 lg:pb-10">
-        <div class="w-full max-w-7xl px-6 relative min-h-[250px] overflow-hidden">
+        <div class="w-full max-w-7xl px-6 relative min-h-[250px]">
           {/* Salida */}
           {isTransitioning && prevSection && (
             <div

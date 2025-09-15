@@ -3,6 +3,7 @@ import { useState, useRef } from 'preact/hooks';
 import Buttons from '../components/Buttons';
 import Cards from './Cards';
 import WordPressIcon from './icons/WordPress';
+import JoomlaIcon from './icons/joomla';
 import HTMLIcon from './icons/HTML';
 import CSSIcon from './icons/CSS';
 import PHPIcon from './icons/PHP';
@@ -92,16 +93,15 @@ export default function Proyectos() {
           {prevTab === 'webs' && (
             <div class="grid gap-12 grid-cols-1 justify-items-center lg:px-16 md:px-16">
               <Cards 
-                imgSrc="/projectsWeb/PW_Mibtsar.webp"
-                title="Mibtsar.es"
-                description="Programador Front-End/Back-End y diseñador de la página web para la empresa Mibtsár. Creando una experiencia funcional y visualmente atractiva acorde a su identidad."
+                imgSrc="/projectsWeb/PW_Rompamoseltabu.webp"
+                title="Rompamoseltabu.com"
+                description="Desarrollo web para la campaña Rompamos el tabú, dedicada a la educación y concienciación sobre la salud Y prevención de enfermedades de transmisión sexual (ETS) en jóvenes."
                 tags={[
-                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800", icon: <WordPressIcon class="size-5" />},
+                  {name: "Joomla", bgColor: "bg-blue-100 text-blue-800", icon: <JoomlaIcon class="size-5" />},
                   {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
                   {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <CSSIcon class="size-5" />},
                   {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
                   {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800", icon: <PHPIcon class="size-5" />},
-                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800", icon: <MySQLIcon class="size-5" />},
                   {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},
                 ]}        
               />
@@ -188,16 +188,15 @@ export default function Proyectos() {
           {selectedTab === 'webs' && (
             <div class="grid gap-12 grid-cols-1 justify-items-center lg:px-16 md:px-16">
               <Cards 
-                imgSrc="/projectsWeb/PW_Mibtsar.webp"
-                title="Mibtsar.es"
-                description="Programador Front-End/Back-End y diseñador de la página web para la empresa Mibtsár. Creando una experiencia funcional y visualmente atractiva acorde a su identidad."
+                imgSrc="/projectsWeb/PW_Rompamoseltabu.webp"
+                title="Rompamoseltabu.com"
+                description="Desarrollo web para la campaña Rompamos el tabú, dedicada a la educación y concienciación sobre la salud Y prevención de enfermedades de transmisión sexual (ETS) en jóvenes."
                 tags={[
-                  {name: "Wordpress", bgColor: "bg-blue-100 text-blue-800", icon: <WordPressIcon class="size-5" />},
+                  {name: "Joomla", bgColor: "bg-blue-100 text-blue-800", icon: <JoomlaIcon class="size-5" />},
                   {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
                   {name: "CSS", bgColor: "bg-cyan-100 text-cyan-800", icon: <CSSIcon class="size-5" />},
                   {name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800", icon: <JavaScriptIcon class="size-5" />},
                   {name: "PHP", bgColor: "bg-indigo-100 text-indigo-800", icon: <PHPIcon class="size-5" />},
-                  {name: "MySQL", bgColor: "bg-sky-100 text-sky-800", icon: <MySQLIcon class="size-5" />},
                   {name: "Figma", bgColor: "bg-rose-100 text-pink-800", icon: <FigmaIcon class="size-5" />},
                 ]}        
               />
