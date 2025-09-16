@@ -10,6 +10,7 @@ import LinkedIn from './icons/LinkedIn';
 import Mail from './icons/Mail';
 import ArrowLeft from './icons/ArrowLeft';
 import ArrowRight from './icons/ArrowRight';
+import FadeIn from './FadeIn';
 
 export default function InicioSection() {
   const swiperRef = useRef<HTMLDivElement>(null);
@@ -65,6 +66,7 @@ export default function InicioSection() {
   return (
     <>
       {/* Contenedor principal */}
+      <FadeIn delayStep={300}>
       <div class="flex lg:flex-row flex-col items-center xl:gap-x-40 gap-x-10 gap-y-14 max-w-7xl mx-auto">
         {/* Texto y redes */}
         <div class="flex flex-col items-center text-center max-w-[600px] w-full">
@@ -152,9 +154,10 @@ export default function InicioSection() {
           </div>
         </div>
       </div>
+      </FadeIn>
 
       {/* Íconos dinámicos con animación de entrada/salida */}
-      <div class="flex items-center justify-center py-10 lg:pt-24 lg:pb-10">
+      <div class="flex items-center justify-center py-10 lg:pt-24 lg:pb-10 animate-fadeIn delay-1000">
         <div class="w-full max-w-7xl px-6 relative min-h-[250px]">
           {/* Salida */}
           {isTransitioning && prevSection && (

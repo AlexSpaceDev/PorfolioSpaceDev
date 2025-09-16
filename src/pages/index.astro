@@ -6,7 +6,9 @@ import Footer from '../components/Footer.astro';
 import TopSection from '../components/TopSection.tsx';
 import InicioSection from '../components/InicioSection';
 import NuestroEquipoSection from '../components/NuestroEquipoSection.astro';
+import ContactoSection from '../components/Contacto.astro';
 import Clipboard from '../components/Clipboard';
+import FadeIn from '../components/FadeIn.tsx';
 
 ---
 
@@ -23,39 +25,35 @@ import Clipboard from '../components/Clipboard';
     
     <!-- Inicio -->
     <SectionContainer id="inicio" class="py-16 gap-x-14 gap-y-24">
-      <InicioSection client:load />
+      <FadeIn client:load>
+        <InicioSection client:load />
+      </FadeIn>
     </SectionContainer>
 
     <!-- Proyectos -->
     <SectionContainer id="proyectos" class="py-16">
+      <FadeIn client:load>
       <div class="flex justify-center">
         <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl pb-12 lg:pt-10">
           Proyectos
         </h2>
       </div>
       <Proyectos client:load />
+      </FadeIn>
     </SectionContainer>
     
     <!-- Nuestro Equipo -->
     <SectionContainer id="nuestro-equipo" class="flex flex-col items-center justify-center py-16 lg:py-44 gap-y-24">
+      <FadeIn client:load>
       <NuestroEquipoSection /> 
+      </FadeIn>
     </SectionContainer>
 
     <!-- Contacto -->
-    <SectionContainer id="contacto" bgClass="bg-black bg-opacity-60" class="py-16 lg:py-24 flex flex-col items-center gap-y-11">
-    <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
-      Contacto
-    </h2>
-    <div class="flex flex-col justify-center gap-y-8">
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200">
-      ¿Tienes una idea, proyecto o colaboración en mente?
-      </h3>
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200 [&>strong]:text-SpacePalette-600">
-      <strong>Muchas buenas ideas ven la luz</strong> comenzando con una simple conversación.
-      Si requieres ayuda o conocer más sobre nuestro trabajo, no dudes en contactarnos.
-      </h3>
-    </div>
-    <Clipboard client:load />
+    <SectionContainer id="contacto" bgClass="bg-black bg-opacity-60" class="py-16 lg:py-24">
+      <FadeIn client:load>
+      <ContactoSection />
+      </FadeIn>
     </SectionContainer>
 
     <!-- Footer -->

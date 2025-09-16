@@ -16,6 +16,10 @@ export default {
 					'0%':{opacity: 0},
 					'100%':{opacity: 1},
 				},
+				fadeIn: {
+				"0%": { opacity: "0", transform: "translateY(20px)" },
+				"100%": { opacity: "1", transform: "translateY(0)" },
+				},
 				'gradient-border': {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
@@ -136,6 +140,7 @@ export default {
     			'slide-fade-out': 'slideFadeOut 0.4s ease-in forwards',
 				'slide-fade-in-reverse': 'slideFadeInReverse 0.5s ease-out forwards',
 				'slide-fade-out-reverse': 'slideFadeOutReverse 0.4s ease-in forwards',
+				fadeIn: "fadeIn 0.8s ease-out forwards",
 			},
 						
 			colors:{
