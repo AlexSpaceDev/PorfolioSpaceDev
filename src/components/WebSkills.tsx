@@ -16,55 +16,55 @@ export default function WebSkills() {
   return (
     <div>
       <ul class="flex flex-wrap lg:gap-12 gap-5 lg:px-10 px-2 justify-center items-center lg:text-base text-xs">
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <HTMLIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">HTML</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <CSSIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">CSS</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <JavaScriptIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">JavaScript</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <TypeScriptIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">TypeScript</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs text-center">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125 text-center">
           <TailwindCSSIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">Tailwind CSS</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <AstroIconW class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">Astro</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <PreactIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">Preact</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <NodejsIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">Node.js</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <PHPIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">PHP</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <MySQLIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">MySQL</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <WordPressIconW class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">WordPress</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125">
           <JoomlaIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2" />
           <span class="mt-1 text-white">Joomla</span>
         </li>
-        <li class="flex flex-col items-center lg:text-base text-xs text-center">
+        <li class="flex flex-col items-center lg:text-base text-xs transform transition duration-200 hover:scale-125 text-center">
           <VisualStudioCodeIcon class="lg:w-16 lg:h-16 w-10 h-10 mt-2"/>
           <span class="mt-1 text-white">VS Code</span>
         </li>
