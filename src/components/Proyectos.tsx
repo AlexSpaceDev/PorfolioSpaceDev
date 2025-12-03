@@ -96,6 +96,7 @@ export default function Proyectos() {
                 imgSrc="/projectsWeb/PW_Rompamoseltabu.webp"
                 title="Rompamoseltabu.com"
                 description="Desarrollo web para la campaña Rompamos el tabú, dedicada a la educación y concienciación sobre la salud Y prevención de enfermedades de transmisión sexual (ETS) en jóvenes."
+                href="https://rompamoseltabu.com/"
                 tags={[
                   {name: "Joomla", bgColor: "bg-blue-100 text-blue-800", icon: <JoomlaIcon class="size-5" />},
                   {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
@@ -109,6 +110,7 @@ export default function Proyectos() {
                 imgSrc="/projectsWeb/PW_Spacedev.webp"
                 title="Spacedev.me"
                 description="Desarrollo y diseño web de Spacedev.me, presentando nuestra marca dentro de una experiencia web rápida, accesible y visualmente atractiva." 
+                href="https://spacedev.me"
                 tags={[
                   {name: "Node.js", bgColor: "bg-lime-200 text-lime-800", icon: <NodejsIcon class="size-5" />},
                   {name: "Astro", bgColor: "bg-amber-200 text-amber-800", icon: <AstroIcon class="size-5" />},
@@ -128,6 +130,7 @@ export default function Proyectos() {
                 imgSrc="/projectsVideogames/PV_TrazandoPasos.webp"
                 title="Trazando Pasos"
                 description="Programación del videojuego de realidad virtual Trazando Pasos, una experiencia que explora los desafíos de la migración. Este juego fue galardonado como el ganador del GameJam VRDay Latam 2022."
+                href="https://www.behance.net/gallery/166470549/Trazando-Pasos-(videojuego-VR)-(2023)"
                 tags={[
                   {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
                   {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
@@ -137,6 +140,7 @@ export default function Proyectos() {
                 imgSrc="/projectsVideogames/PV_PlantainFeast.webp"
                 title="Plantain Feast"
                 description="Programación de Platain Feast, un juego de cocina en 2D para móviles que celebra la gastronomía ecuatoriana al presentar recetas tradicionales con el plátano como ingrediente principal."
+                href="https://www.behance.net/gallery/166078851/Plantain-Feast"
                 tags={[
                   {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
                   {name: "2D", bgColor: "bg-yellow-200 text-yellow-800", icon: <TwoDIcon class="size-5" />},
@@ -151,6 +155,7 @@ export default function Proyectos() {
                 imgSrc="/projectsOthers/PO_Alerta.webp"
                 title="ALERTA!"
                 description="Desarrollo en realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, una exposición interactiva que usa códigos QR para explorar señales de alerta sobre salud mental mediante ilustraciones y animaciones."
+                href="https://www.expreso.ec/guayaquil/arte-interactivo-busca-sensibilizar-enos-salud-mental-213527.html"
                 tags={[
                   {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800", icon: <MetaSparkStudioIcon class="size-5" />},
                   {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800", icon: <LensStudioIcon class="size-5" />},
@@ -163,6 +168,7 @@ export default function Proyectos() {
                 imgSrc="/projectsOthers/PO_SimulacionSoldadura.webp"
                 title="Simulación Soldadura"
                 description="Programación de un simulador de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura, desde la vestimenta adecuada hasta el acabado final."
+                href="https://www.canva.com/design/DAGQfhKZAcg/fuZ0j9mHAswxeGnv_saAdw/edit?utm_content=DAGQfhKZAcg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                 tags={[
                   {name: "Unity", bgColor: "bg-gray-200 text-gray-800", icon: <UnityIconB class="size-5" />},
                   {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
@@ -191,6 +197,7 @@ export default function Proyectos() {
                 imgSrc="/projectsWeb/PW_Rompamoseltabu.webp"
                 title="Rompamoseltabu.com"
                 description="Desarrollo web para la campaña Rompamos el tabú, dedicada a la educación y concienciación sobre la salud Y prevención de enfermedades de transmisión sexual (ETS) en jóvenes."
+                href="https://rompamoseltabu.com/"
                 tags={[
                   {name: "Joomla", bgColor: "bg-blue-100 text-blue-800", icon: <JoomlaIcon class="size-5" />},
                   {name: "HTML", bgColor: "bg-orange-100 text-orange-800", icon: <HTMLIcon class="size-5" />},
@@ -204,6 +211,7 @@ export default function Proyectos() {
                 imgSrc="/projectsWeb/PW_Spacedev.webp"
                 title="Spacedev.me"
                 description="Desarrollo y diseño web de Spacedev.me, presentando nuestra marca dentro de una experiencia web rápida, accesible y visualmente atractiva." 
+                href="https://spacedev.me"
                 tags={[
                   {name: "Node.js", bgColor: "bg-lime-200 text-lime-800", icon: <NodejsIcon class="size-5" />},
                   {name: "Astro", bgColor: "bg-amber-200 text-amber-800", icon: <AstroIcon class="size-5" />},
@@ -223,6 +231,7 @@ export default function Proyectos() {
                 imgSrc="/projectsVideogames/PV_TrazandoPasos.webp"
                 title="Trazando Pasos"
                 description="Programación del videojuego de realidad virtual Trazando Pasos, una experiencia que explora los desafíos de la migración. Este juego fue galardonado como el ganador del GameJam VRDay Latam 2022."
+                href="https://www.behance.net/gallery/166470549/Trazando-Pasos-(videojuego-VR)-(2023)"
                 tags={[
                   {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
                   {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},
@@ -232,6 +241,7 @@ export default function Proyectos() {
                 imgSrc="/projectsVideogames/PV_PlantainFeast.webp"
                 title="Plantain Feast"
                 description="Programación de Platain Feast, un juego de cocina en 2D para móviles que celebra la gastronomía ecuatoriana al presentar recetas tradicionales con el plátano como ingrediente principal."
+                href="https://www.behance.net/gallery/166078851/Plantain-Feast"
                 tags={[
                   {name: "Unreal Engine", bgColor: "bg-stone-200 text-stone-800", icon: <UnrealIconB class="size-5" />},
                   {name: "2D", bgColor: "bg-yellow-200 text-yellow-800", icon: <TwoDIcon class="size-5" />},
@@ -246,6 +256,7 @@ export default function Proyectos() {
                 imgSrc="/projectsOthers/PO_Alerta.webp"
                 title="ALERTA!"
                 description="Desarrollo en realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, una exposición interactiva que usa códigos QR para explorar señales de alerta sobre salud mental mediante ilustraciones y animaciones."
+                href="https://www.expreso.ec/guayaquil/arte-interactivo-busca-sensibilizar-enos-salud-mental-213527.html"
                 tags={[
                   {name: "Meta Spark Studio", bgColor: "bg-fuchsia-200 text-fuchsia-800", icon: <MetaSparkStudioIcon class="size-5" />},
                   {name: "Lens Studio", bgColor: "bg-amber-100 text-amber-800", icon: <LensStudioIcon class="size-5" />},
@@ -258,6 +269,7 @@ export default function Proyectos() {
                 imgSrc="/projectsOthers/PO_SimulacionSoldadura.webp"
                 title="Simulación Soldadura"
                 description="Programación de un simulador de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura, desde la vestimenta adecuada hasta el acabado final."
+                href="https://www.canva.com/design/DAGQfhKZAcg/fuZ0j9mHAswxeGnv_saAdw/edit?utm_content=DAGQfhKZAcg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                 tags={[
                   {name: "Unity", bgColor: "bg-gray-200 text-gray-800", icon: <UnityIconB class="size-5" />},
                   {name: "Realidad Virtual", bgColor: "bg-orange-200 text-orange-800", icon: <VRIcon class="size-5" />},

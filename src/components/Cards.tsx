@@ -7,9 +7,10 @@ interface CardsProps {
   title: string;
   description: string;
   tags: { name: string; bgColor: string; icon?: JSX.Element }[];
+  href?: string; // ⬅ nuevo
 }
 
-export default function Cards({ imgSrc, title, description, tags }: CardsProps) {
+export default function Cards({ imgSrc, title, description, tags, href }: CardsProps) {
   // Maneja el clic para evitar que el enlace vacío recargue la página
   const handleClick = (event: any) => {
     event.preventDefault();
@@ -21,9 +22,10 @@ export default function Cards({ imgSrc, title, description, tags }: CardsProps) 
     <div class="w-full flex flex-col lg:flex-row bg-SpacePalette-100 rounded-xl shadow-SpacePalette-300/55 shadow-lg overflow-hidden">
       {/* Imagen de la card */}
       <a
-        href="#"
-        onClick={handleClick}
-        class="flex-none lg:w-80 h-48 lg:h-72 bg-cover bg-center rounded-t-lg lg:rounded-t-none lg:rounded-l-xl overflow-hidden transition hover:scale-110 cursor-default"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-none lg:w-80 h-48 lg:h-72 bg-cover bg-center rounded-t-lg lg:rounded-t-none lg:rounded-l-xl overflow-hidden transition hover:scale-110 cursor-pointer"
         style={{ backgroundImage: `url(${imgSrc})` }}
         title={`Imagen de ${title}`}
       ></a>
