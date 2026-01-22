@@ -1,13 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Proyectos from '../components/Proyectos.tsx';
-import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
-import InicioSection from '../components/InicioSection';
-import NuestroEquipoSection from '../components/NuestroEquipoSection.astro';
-import ContactoSection from '../components/Contacto.astro';
-import FadeIn from '../components/FadeIn.tsx';
 
 ---
 
@@ -21,43 +14,7 @@ import FadeIn from '../components/FadeIn.tsx';
     <Hero />
     
     
-    <!-- Inicio -->
-    <SectionContainer id="inicio" class="py-16 gap-x-14 gap-y-24">
-      <FadeIn client:load>
-        <InicioSection client:load />
-      </FadeIn>
-    </SectionContainer>
 
-    <!-- Proyectos -->
-    <SectionContainer id="proyectos" class="py-16">
-      <FadeIn client:load>
-      <div class="flex justify-center">
-        <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl pb-12 lg:pt-10">
-          Proyectos
-        </h2>
-      </div>
-      <Proyectos client:load />
-      </FadeIn>
-    </SectionContainer>
-    
-    <!-- Nuestro Equipo -->
-    <SectionContainer id="nuestro-equipo" class="flex flex-col items-center justify-center py-16 lg:py-44 gap-y-24">
-      <FadeIn client:load>
-      <NuestroEquipoSection /> 
-      </FadeIn>
-    </SectionContainer>
-
-    <!-- Contacto -->
-    <SectionContainer id="contacto" bgClass="bg-black bg-opacity-60" class="py-16 lg:py-24">
-      <FadeIn client:load>
-      <ContactoSection />
-      </FadeIn>
-    </SectionContainer>
-
-    <!-- Footer -->
-    <SectionContainer bgClass="bg-black bg-opacity-60" class="pb-10">
-    <Footer />
-    </SectionContainer>
 
   </main>
 </Layout>
