@@ -3,11 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Proyectos from '../components/Proyectos.tsx';
 import Footer from '../components/Footer.astro';
-import TopSection from '../components/TopSection.tsx';
+import Hero from '../components/Hero.astro';
 import InicioSection from '../components/InicioSection';
 import NuestroEquipoSection from '../components/NuestroEquipoSection.astro';
 import ContactoSection from '../components/Contacto.astro';
-import Clipboard from '../components/Clipboard';
 import FadeIn from '../components/FadeIn.tsx';
 
 ---
@@ -19,9 +18,8 @@ import FadeIn from '../components/FadeIn.tsx';
   <main class="z-10">
     
     <!-- Hero / Top -->
-    <SectionContainer id="top" class="flex items-center flex-col lg:gap-24 gap-10 lg:pt-52 pt-48 pb-32">
-      <TopSection client:load />
-    </SectionContainer>
+    <Hero />
+    
     
     <!-- Inicio -->
     <SectionContainer id="inicio" class="py-16 gap-x-14 gap-y-24">

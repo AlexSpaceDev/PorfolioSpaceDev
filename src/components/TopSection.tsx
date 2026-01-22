@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'preact/hooks';
-import ArrowDown from './icons/ArrowDown';
 
+import ArrowDown from './icons/ArrowDown';
+{/*
 export default function SectionTop() {
   const [cloudState, setCloudState] = useState<'idle' | 'entry' | 'exit' | 'reverse'>('idle');
   const [animationKey, setAnimationKey] = useState(0);
@@ -80,7 +80,7 @@ export default function SectionTop() {
 
   return (
     <>
-      {/* Nube izquierda */}
+      {/* Nube izquierda 
       <img
         key={isDesktop ? `cloud1-${animationKey}` : 'cloud1'}
         src="/pictures/cloud2.png"
@@ -97,7 +97,7 @@ export default function SectionTop() {
           }`}
       />
 
-      {/* Nube derecha */}
+      {/* Nube derecha 
       <img
         key={isDesktop ? `cloud2-${animationKey}` : 'cloud2'}
         src="/pictures/cloud2.png"
@@ -114,7 +114,7 @@ export default function SectionTop() {
           }`}
       />
 
-      {/* Logo */}
+      {/* Logo *
       <img
         class={`mx-auto w-80 md:w-96 3xl:w-3/6 2xl:w-2/5 drop-shadow-custom-white transition-all duration-1000 ease-out delay-200 ${
           hasEntered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
@@ -123,7 +123,7 @@ export default function SectionTop() {
         alt="Logo de SpaceDEV"
       />
 
-      {/* Slogan */}
+      {/* Slogan 
       <h1
         class={`text-xl lg:text-lg text-SpacePalette-100 text-center transition-all duration-1000 ease-out delay-500 ${
           hasEntered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
@@ -132,7 +132,7 @@ export default function SectionTop() {
         LO IMAGINAS, SE CREA
       </h1>
 
-      {/* Botón */}
+      {/* Botón 
       <button
         onClick={handleStartClick}
         class={`flex flex-col items-center lg:mt-10 mt-28 group gap-5 transition-opacity duration-700 ease-out delay-700 ${
@@ -146,5 +146,6 @@ export default function SectionTop() {
     </>
   );
 }
+*/}
 
 

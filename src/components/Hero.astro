@@ -1,0 +1,127 @@
+---
+/**
+ * Hero principal de Space DEV
+ * Renderizado 100% en Astro (sin JS)
+ */
+---
+
+<section class="relative w-full">
+  <div class="flex items-center justify-center pt-32 pb-40 px-6">
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Columna izquierda -->
+      <div class="lg:col-span-8 space-y-8">
+
+        <!-- Estado -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] uppercase tracking-[0.2em] font-bold">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          SISTEMA EN LÍNEA: V4.0.2
+        </div>
+
+        <!-- Título -->
+        <h1 class="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tight">
+          Si es
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cosmic-violet">
+            código
+          </span>,<br />
+          es realidad.
+        </h1>
+
+        <!-- Descripción -->
+        <p class="text-lg md:text-xl text-gray-400 max-w-xl font-light leading-relaxed">
+          Ingeniería de fronteras digitales para la próxima generación de pioneros.
+          Creamos sistemas de alto rendimiento donde el diseño se encuentra con la precisión matemática.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 pt-4">
+          <button class="group flex items-center gap-2 bg-primary text-background-dark px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(0,225,255,0.2)]">
+            Iniciar Exploración
+            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+              arrow_forward
+            </span>
+          </button>
+
+          <button class="group flex items-center gap-2 border border-white/10 hover:border-primary/50 bg-white/5 px-8 py-4 rounded-xl text-lg font-bold transition-all backdrop-blur-sm">
+            Ver Manifiesto
+            <span class="material-symbols-outlined text-primary">
+              terminal
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="lg:col-span-4 hidden lg:flex flex-col gap-6">
+
+        <!-- Estado del nodo -->
+        <div class="glass-panel p-6 rounded-xl space-y-4">
+          <div class="flex justify-between items-center border-b border-white/10 pb-2">
+            <span class="text-[10px] uppercase tracking-widest text-primary font-bold">
+              ESTADO DEL NODO
+            </span>
+            <span class="material-symbols-outlined text-xs text-primary">
+              sensors
+            </span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">LATENCIA_MS</span>
+              <span class="data-stream-text text-primary">0.0012</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">SINC_NÚCLEO</span>
+              <span class="data-stream-text text-primary">99.9%</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">RENDIMIENTO</span>
+              <span class="data-stream-text text-primary">4.2 TB/S</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card proyecto -->
+        <div class="relative aspect-square rounded-xl overflow-hidden border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[120px] text-white/5 animate-pulse">
+              language
+            </span>
+          </div>
+
+          <div class="absolute bottom-4 left-4 right-4">
+            <div class="p-4 glass-panel rounded-lg flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-sm">
+                  rocket_launch
+                </span>
+              </div>
+              <div>
+                <p class="text-[10px] text-gray-400 uppercase tracking-tighter">
+                  PROYECTO ACTUAL
+                </p>
+                <p class="text-xs font-bold uppercase">
+                  PROTOCOLO NEBULA
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Indicador scroll -->
+  <div class="absolute bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer animate-bounce-slow">
+    <span class="text-primary text-[10px] font-bold tracking-[0.4em] uppercase font-mono">
+      DESCUBRE
+    </span>
+    <span class="material-symbols-outlined text-primary text-3xl drop-shadow-[0_0_8px_rgba(0,225,255,0.6)]">
+      expand_more
+    </span>
+  </div>
+</section>
