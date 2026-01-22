@@ -16,6 +16,7 @@
     "@fontsource-variable/orbitron": "^5.1.0",
     "@fontsource-variable/rubik": "^5.1.0",
     "@fontsource/kodchasan": "^5.2.5",
+    "@fontsource/space-grotesk": "^5.2.10",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.7.5",
