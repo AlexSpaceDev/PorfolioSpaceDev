@@ -162,6 +162,8 @@ export default {
 
 				glass: 'rgba(24, 24, 37, 0.6)',
 
+				'deep-navy': '#020205',
+
 				redWeb: {
 					100: '#FCFCFC',
 					200: '#E8E8E8',
