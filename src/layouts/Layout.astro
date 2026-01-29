@@ -180,6 +180,33 @@ const { description, title } = Astro.props;
             filter: drop-shadow(0 0 8px rgba(0, 225, 255, 0.8));
         }
 
+        .glow-cyan {
+            box-shadow: 0 0 25px rgba(0, 225, 255, 0.4);
+        }
+        .glow-input {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-input:focus-within {
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.3);
+            border-color: #00e1ff;
+        }
+        .glow-border-primary {
+            border: 2px solid rgba(0, 225, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glow-border-primary:focus {
+            border-color: #00e1ff;
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.2);
+            outline: none;
+        }
+
+                .mission-type-card.active {
+            @apply border-primary bg-primary/10;
+        }
+        .mission-type-card.active span.material-symbols-outlined {
+            @apply text-primary;
+        }
 
 
 
