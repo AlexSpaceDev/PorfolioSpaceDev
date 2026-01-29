@@ -154,6 +154,7 @@ export default {
 			colors:{
 				primary: '#00e1ff',
 				'cosmic-violet':'#7F00FF',
+				"secondary": "#7f00ff",
 
 				background: {
 					light: '#f5f8f8',

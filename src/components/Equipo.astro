@@ -1,0 +1,205 @@
+---
+/*
+  Sección: El Equipo
+  Componente Astro puro (sin JS)
+*/
+---
+
+<section
+  id="equipo"
+  class="flex flex-col items-center px-6 pt-12 pb-24 max-w-7xl mx-auto w-full"
+>
+  <!-- Header de sección -->
+  <div class="w-full mb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+        </span>
+        <span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">
+          BASE DE DATOS DE PERSONAL v2.0
+        </span>
+      </div>
+
+      <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none uppercase">
+        EL
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          EQUIPO
+        </span>
+      </h2>
+    </div>
+
+    <div class="max-w-md pb-2">
+      <p class="text-slate-400 text-lg leading-relaxed mb-6">
+        Mentes creativas diseñando el futuro. Un colectivo de arquitectos neuronales y desarrolladores
+        cuánticos construyendo la próxima generación de la web galáctica.
+      </p>
+
+      <div class="flex gap-4">
+        <div class="flex flex-col">
+          <span class="text-primary font-bold text-2xl">42</span>
+          <span class="text-[10px] text-slate-500 tracking-widest uppercase">Misiones</span>
+        </div>
+
+        <div class="w-px h-10 bg-white/10 mx-2"></div>
+
+        <div class="flex flex-col">
+          <span class="text-primary font-bold text-2xl">12</span>
+          <span class="text-[10px] text-slate-500 tracking-widest uppercase">Sectores</span>
+        </div>
+
+        <div class="w-px h-10 bg-white/10 mx-2"></div>
+
+        <div class="flex flex-col">
+          <span class="text-primary font-bold text-2xl">∞</span>
+          <span class="text-[10px] text-slate-500 tracking-widest uppercase">Visión</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid de miembros -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+<div class="lg:col-span-2 glass-card rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center neon-glow group transition-all duration-500 relative">
+<div class="absolute top-6 right-8 flex gap-4">
+<a class="social-icon-glow text-slate-500" href="#" title="Behance"><svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 14.341h-5.464c.224 1.109 1.127 1.545 2.21 1.545 1.054 0 1.942-.511 2.053-1.428h1.166c-.156 1.492-1.391 2.382-3.235 2.382-2.31 0-3.39-1.492-3.39-3.39 0-2.074 1.258-3.41 3.254-3.41 2.14 0 3.255 1.503 3.255 3.39 0 .341-.01.62-.03.911zm-5.446-1.09h4.305c-.097-1.11-.904-1.571-2.091-1.571-1.22 0-2.072.483-2.214 1.571zM8.281 12.383c0 .762-.48 1.144-1.296 1.144H4.551v-2.308h2.388c.875 0 1.342.433 1.342 1.164zm-.19-3.279c0 .64-.401.996-1.122.996H4.551V9.088h2.32c.801 0 1.22.316 1.22 1.016zM3.4 16.84h4.155c2.312 0 3.65-1.077 3.65-2.81 0-.91-.39-1.554-1.246-1.928.701-.402 1.058-1.042 1.058-1.87 0-1.636-1.157-2.603-3.254-2.603H3.4v9.211zm15.424-9.366h-4.308v.911h4.308v-.911z"></path></svg></a>
+<a class="social-icon-glow text-slate-500" href="#" title="LinkedIn"><svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/40 transition-all"></div>
+<div class="relative size-48 rounded-full border-2 border-primary/30 p-2 overflow-hidden bg-background-dark">
+<div class="w-full h-full rounded-full bg-cover bg-center portrait-filter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI3S32R7M1VTJ2-ElZwlKrJ5iMWaUnWvfKEuS6d0937s218QUJIowjGcZoOt8EawUnSt6Rzm401_yFsl5Vlgk2opbZieiUV-RG03flf25fPJJkB6In0je3b9eFDZPJ_NHkWMoI_yDWKE3ReWj0qJLEKMp25IRLhY8OZ8FHJ1emHfRh4y6mraVHlkVNf1SxOI4Mg8h9Qxcf_WVzy21QbpxfO7bI_vkuNz5zImpuX8W6wXiTDCl_HcaJOzDWTlr6mnXh8CtaUxkBQ9M');"></div>
+<div class="absolute inset-0 cyan-tint mix-blend-overlay"></div>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-primary text-background-dark p-2 rounded-lg" title="Perfil Verificado">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-mono text-primary border border-primary/40 px-2 py-0.5 rounded">CMDR-01</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase">COORD: 45.2N / 12.8O</span>
+</div>
+<h3 class="text-3xl font-bold tracking-tight">ARIA NOVA</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/20 uppercase" title="Especialización">Arquitecto de Sistemas</span>
+<span class="bg-white/5 text-slate-400 text-[10px] font-bold px-3 py-1 rounded-full border border-white/10 uppercase" title="Rol">Líder de Desarrollo</span>
+</div>
+<p class="text-slate-400 text-sm italic" title="Bio">"Cerrando la brecha entre las sinapsis neuronales y la lógica del silicio."</p>
+<div class="pt-4 flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors" title="Acceder a terminal de comandos"><span class="material-symbols-outlined">terminal</span></button>
+<button class="text-slate-500 hover:text-primary transition-colors" title="Ver enlace satelital"><span class="material-symbols-outlined">satellite_alt</span></button>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col items-center text-center neon-glow group transition-all duration-500 relative">
+<div class="absolute top-4 right-4 flex gap-3">
+<a class="social-icon-glow text-slate-500" href="#" title="GitHub"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+<a class="social-icon-glow text-slate-500" href="#" title="LinkedIn"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+</div>
+<div class="relative mb-6">
+<div class="size-24 rounded-full border border-primary/30 p-1 bg-background-dark overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center portrait-filter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7y9MQSjtEazBnGJUj_rPelgagsrwlHE_ySJAY0gvBcN5kYByQgf-Q8bxsJgxu_yrLdkBqLw-vLW8qzvVTv0QJiqh5nP0cbmRyg-NEsb93LYQwBOoqM5NOsBR5m45vbLqQFNfbTV7YN3wtwfP7OgfnDBl_exJhndWHE5IyAtSQZFM1_M8EiAYSmmDOHj1owv0AakKO1simvp5hQddyT03WgY5KvLiBkDca2ODUBqe8MfOMhfOo5znG1KCNdRlGO2nEikbXBk-WOtI');"></div>
+</div>
+<div class="absolute inset-0 rounded-full border border-primary/0 group-hover:border-primary/50 transition-all scale-110 group-hover:scale-125"></div>
+</div>
+<h3 class="text-xl font-bold mb-2">JAX VOID</h3>
+<span class="text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/20 uppercase mb-4" title="Especialización">Desarrollo Cuántico</span>
+<div class="w-full h-px bg-white/5 my-4"></div>
+<div class="grid grid-cols-2 gap-4 w-full text-left">
+<div>
+<p class="text-[8px] text-slate-500 uppercase tracking-tighter">Total Misiones</p>
+<p class="text-xs font-mono text-white">128</p>
+</div>
+<div>
+<p class="text-[8px] text-slate-500 uppercase tracking-tighter">Estado</p>
+<p class="text-xs font-mono text-emerald-400 uppercase">ACTIVO</p>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col items-center text-center neon-glow group transition-all duration-500 relative">
+<div class="absolute top-4 right-4 flex gap-3">
+<a class="social-icon-glow text-slate-500" href="#" title="Instagram"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+<a class="social-icon-glow text-slate-500" href="#" title="Behance"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 14.341h-5.464c.224 1.109 1.127 1.545 2.21 1.545 1.054 0 1.942-.511 2.053-1.428h1.166c-.156 1.492-1.391 2.382-3.235 2.382-2.31 0-3.39-1.492-3.39-3.39 0-2.074 1.258-3.41 3.254-3.41 2.14 0 3.255 1.503 3.255 3.39 0 .341-.01.62-.03.911zm-5.446-1.09h4.305c-.097-1.11-.904-1.571-2.091-1.571-1.22 0-2.072.483-2.214 1.571zM8.281 12.383c0 .762-.48 1.144-1.296 1.144H4.551v-2.308h2.388c.875 0 1.342.433 1.342 1.164zm-.19-3.279c0 .64-.401.996-1.122.996H4.551V9.088h2.32c.801 0 1.22.316 1.22 1.016zM3.4 16.84h4.155c2.312 0 3.65-1.077 3.65-2.81 0-.91-.39-1.554-1.246-1.928.701-.402 1.058-1.042 1.058-1.87 0-1.636-1.157-2.603-3.254-2.603H3.4v9.211zm15.424-9.366h-4.308v.911h4.308v-.911z"></path></svg></a>
+</div>
+<div class="relative mb-6">
+<div class="size-24 rounded-full border border-primary/30 p-1 bg-background-dark overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center portrait-filter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD_MFvRXlKP_fCUNMrrJezVfMnl2lUch1TymM_D83aNf1BHbeQmyLzENEjKvibWzHk4Gdot3fiYuZWHF7qIFNvup1qQzud53vlGW7XNcKsIo1V4HiwU3EgkCCL7SzpLJVH-M77YHfUAn0Nu7i0MntvMpq99WbDH6B4iaE3GNUkCc7OibILdT1Ilf9Rm-EkScO08-B3RTQCP1kG0jdcmPvVtiYkdWqkR3EMhKrOtZMvLSRGyyfaLWy5sqvA1pvVRmVvvGBx0gVAYqc');"></div>
+</div>
+<div class="absolute inset-0 rounded-full border border-primary/0 group-hover:border-primary/50 transition-all scale-110 group-hover:scale-125"></div>
+</div>
+<h3 class="text-xl font-bold mb-2">LYRA ORBIT</h3>
+<span class="text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/20 uppercase mb-4" title="Especialización">Diseñador de Interfaces Hiperrealistas</span>
+<div class="w-full h-px bg-white/5 my-4"></div>
+<div class="grid grid-cols-2 gap-4 w-full text-left">
+<div>
+<p class="text-[8px] text-slate-500 uppercase tracking-tighter">Tasa de Sincronía</p>
+<p class="text-xs font-mono text-white">99.8%</p>
+</div>
+<div>
+<p class="text-[8px] text-slate-500 uppercase tracking-tighter">Rol</p>
+<p class="text-xs font-mono text-white">UI/X</p>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col justify-center bg-primary/5 border-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">hub</span>
+<h4 class="text-sm font-bold tracking-widest uppercase mb-2">Conexión de Mente Enjambre</h4>
+<p class="text-[10px] text-slate-500 leading-relaxed">Nuestra inteligencia colectiva está sincronizada a través de 12 sectores estelares, asegurando velocidad de desarrollo en tiempo real.</p>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col items-center text-center neon-glow group transition-all duration-500 relative">
+<div class="absolute top-4 right-4 flex gap-3">
+<a class="social-icon-glow text-slate-500" href="#" title="GitHub"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+<a class="social-icon-glow text-slate-500" href="#" title="LinkedIn"><svg class="size-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+</div>
+<div class="relative mb-6">
+<div class="size-24 rounded-full border border-primary/30 p-1 bg-background-dark overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center portrait-filter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSZrhl3nUV8eRZqQcLuDuLR81XBf1lJO9aAQA9xk0BKM3iaziywNDUp5_323cM6fBfUhJWmc5K6fyxLjFy1zyoL1yNpVV7e219C3q_GC3q5SrSFoj-dzQkpyo9XQDN0MZSIs2HULsHXE4wJBR3-hwqTbqZH4KU9em14ORCYIRGdHV-zh986DUpK-Y-l2TapnYWMFXwBA91cQ7xJHyo_DuEdD-cAoGvJ_Z-Vg0W8y7Z-3UzQHx5KanlE1zrMjgdludquDA6B4ib308');"></div>
+</div>
+<div class="absolute inset-0 rounded-full border border-primary/0 group-hover:border-primary/50 transition-all scale-110 group-hover:scale-125"></div>
+</div>
+<h3 class="text-xl font-bold mb-2">KAEL ZENITH</h3>
+<span class="text-primary text-[10px] font-bold px-3 py-1 rounded-full border border-primary/20 uppercase mb-4" title="Especialización">Ingeniero de Realidad Extendida</span>
+<div class="w-full h-px bg-white/5 my-4"></div>
+<div class="flex justify-between w-full">
+<span class="text-[10px] font-mono text-slate-400 uppercase">CIFRADO: AES-Q</span>
+<span class="text-[10px] font-mono text-primary uppercase">SEGURO</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col items-center text-center neon-glow group transition-all duration-500 lg:col-span-2 md:flex-row md:text-left gap-8 relative">
+<div class="absolute top-6 right-8 flex gap-4">
+<a class="social-icon-glow text-slate-500" href="#" title="LinkedIn"><svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+<a class="social-icon-glow text-slate-500" href="#" title="GitHub"><svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+</div>
+<div class="relative">
+<div class="size-32 rounded-xl border border-primary/30 p-1 bg-background-dark overflow-hidden transform rotate-3">
+<div class="w-full h-full bg-cover bg-center portrait-filter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClAKbnM6ZuSzVrQZfvw6wpAO2UIyMb-FTrtyFHQ5yoya_ttCJGUqf0vDe6Y0CjogDlZBb0vxkxRRaDUkTuMyAeHR_HQ4M7iW0SIP6UsK-WG6hMMtHsVTNJgTgyyuWpSRaUe16qrtuvBya_sfjW6enkBLfCew3cZ5MrwEPYENq9XvoM6Nsc4j9vDOVrWF3pdLQU3JUJEnNOS90yPZF73gXhyPYwgjrBkYfC1itlfW0pJAYgO9ilYKqpegJqRw2CjrQfyp9csYxh9lg');"></div>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-2">SOLA RAY</h3>
+<span class="text-secondary text-[10px] font-bold px-3 py-1 rounded-full border border-secondary/20 uppercase mb-4 inline-block" title="Especialización">Arquitecto de Plasma</span>
+<p class="text-slate-400 text-xs mb-4" title="Bio">Ingeniería de flujos de datos de alto rendimiento para protocolos de comunicación en el espacio profundo.</p>
+<div class="flex gap-2">
+<div class="h-1 w-12 bg-primary rounded-full"></div>
+<div class="h-1 w-8 bg-white/20 rounded-full"></div>
+<div class="h-1 w-4 bg-white/20 rounded-full"></div>
+</div>
+</div>
+</div>
+  </div>
+
+  <!-- Footer técnico decorativo -->
+  <div class="mt-24 w-full overflow-hidden opacity-20 relative h-32 glass-card rounded-xl">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="text-[10px] font-mono text-primary flex gap-12 animate-pulse">
+        <span>01010011 01010000 01000001 01000011 01000101</span>
+        <span>COORD::[42.92.128.01]</span>
+        <span>SISTEMA::CORE_INIT::ÉXITO</span>
+        <span>01000100 01000101 01010110</span>
+        <span>SINCRONIZANDO_VACÍOS...</span>
+      </div>
+    </div>
+  </div>
+</section>

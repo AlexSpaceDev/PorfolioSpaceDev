@@ -160,6 +160,26 @@ const { description, title } = Astro.props;
     background: linear-gradient(0deg, rgba(5, 10, 15, 0.95) 0%, rgba(5, 10, 15, 0.4) 100%);
   }
 
+          .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.3);
+            border-color: rgba(0, 225, 255, 0.5);
+        }
+        .portrait-filter {
+            filter: grayscale(100%) brightness(0.8) contrast(1.2);
+            mix-blend-mode: screen;
+        }
+        .cyan-tint {
+            background-color: rgba(0, 225, 255, 0.2);
+        }
+
+                .social-icon-glow {
+            @apply transition-all duration-300 hover:text-primary;
+            filter: drop-shadow(0 0 2px rgba(0, 225, 255, 0.3));
+        }
+        .social-icon-glow:hover {
+            filter: drop-shadow(0 0 8px rgba(0, 225, 255, 0.8));
+        }
+
 
 
 
