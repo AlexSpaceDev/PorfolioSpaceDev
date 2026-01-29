@@ -1,0 +1,173 @@
+---
+/**
+ * Componente: Archivos
+ * Sección independiente para landing page
+ * No recibe props (por ahora)
+ */
+---
+
+<section id="archivos" class="relative w-full">
+  <div class="flex-1 w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 relative z-10">
+
+    <!-- HEADER DE SECCIÓN -->
+    <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-2 text-primary mb-2">
+          <span class="h-[1px] w-8 bg-primary"></span>
+          <span class="text-xs font-bold tracking-[0.3em] uppercase">
+            Acceso al archivo concedido
+          </span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase mb-4">
+          Archivos de
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">
+            Misión
+          </span>
+        </h1>
+
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-light">
+          Un flujo de datos curado de exploración digital, donde la ingeniería de alta fidelidad
+          se une al diseño visionario. Explore nuestros despliegues exitosos a través de la galaxia.
+        </p>
+      </div>
+
+      <button
+        class="border border-primary/30 hover:border-primary px-6 py-3 rounded-lg flex items-center gap-3 transition-all group"
+      >
+        <span class="text-xs font-bold uppercase tracking-widest">Ver Manifiesto</span>
+        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+          arrow_forward
+        </span>
+      </button>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="flex gap-3 mb-16 overflow-x-auto pb-4 no-scrollbar">
+      <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-background-dark px-6 cursor-pointer">
+        <span class="material-symbols-outlined text-lg">grid_view</span>
+        <p class="text-sm font-bold uppercase tracking-tight">TODOS</p>
+      </div>
+
+      <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-white/10 hover:border-primary/50 px-6 cursor-pointer transition-colors">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <p class="text-sm font-medium uppercase tracking-tight opacity-70">WEB</p>
+      </div>
+
+      <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-white/10 hover:border-primary/50 px-6 cursor-pointer transition-colors">
+        <span class="material-symbols-outlined text-lg">sports_esports</span>
+        <p class="text-sm font-medium uppercase tracking-tight opacity-70">GAMING</p>
+      </div>
+
+      <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-white/10 hover:border-primary/50 px-6 cursor-pointer transition-colors">
+        <span class="material-symbols-outlined text-lg">apps</span>
+        <p class="text-sm font-medium uppercase tracking-tight opacity-70">APPS</p>
+      </div>
+
+      <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-white/10 hover:border-primary/50 px-6 cursor-pointer transition-colors">
+        <span class="material-symbols-outlined text-lg">vrpano</span>
+        <p class="text-sm font-medium uppercase tracking-tight opacity-70">VR/AR</p>
+      </div>
+    </div>
+
+    <!-- GRID DE ARCHIVOS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="flex flex-col gap-4">
+
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">
+            CONTRASTE 01
+          </span>
+          <span class="text-[10px] font-bold opacity-40 uppercase tracking-widest">
+            Pixel Art vs 3D Realista
+          </span>
+        </div>
+
+        <!-- CARD -->
+        <div class="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwrlo0aikQDxVHcJz-LjiHJH-iGxjRt2OHw3NPxdLjtWb95u_3_zhSGj9zljm9LMF4_PIk8clOcexK-BY8nkw8wQDJph18DV2kYSRLOCbcI_Ebj4z64kdf7ZOk5oyyum0kRnQ8bUqVXQJDdnjXhoHfjGVMk9wp-vzhew20s41RxXeVIfhIBjczmq7uuaA6YRzlyf7Qq2oNPJQHGhWQUcvrhvMes9t1DdtEw4W46SwTtHBj6tlhyADfuxC63OX0jf_Qvacr0wdL9tc");'
+          ></div>
+
+          <div class="scanline"></div>
+
+          <div class="absolute inset-0 mission-overlay flex flex-col justify-end p-8">
+            <div class="mb-4">
+              <h3 class="text-2xl font-bold uppercase tracking-tight mb-1">
+                Proyecto Aegis
+              </h3>
+
+              <div class="flex gap-2 mb-4">
+                <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded uppercase">Pixel Art</span>
+                <span class="text-[10px] border border-white/20 px-2 py-0.5 rounded uppercase">Web3</span>
+              </div>
+
+              <p class="text-sm text-slate-300 line-clamp-2 max-w-sm mb-6">
+                Interfaz estratégica de ciberdefensa renderizada con una estética detallada de 16 bits
+                para la iniciativa Neo-Tokyo.
+              </p>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-[9px] uppercase tracking-tighter opacity-50">Estado</span>
+                  <span class="text-xs font-bold text-green-400">Desplegado</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-[9px] uppercase tracking-tighter opacity-50">Tecnología</span>
+                  <span class="text-xs font-bold">Rust / GLSL</span>
+                </div>
+              </div>
+
+              <button
+                class="bg-primary hover:bg-white text-background-dark h-12 w-12 rounded-lg flex items-center justify-center transition-all group-hover:w-40 overflow-hidden relative"
+              >
+                <span class="material-symbols-outlined text-xl absolute left-3.5">
+                  rocket_launch
+                </span>
+                <span class="ml-8 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase text-xs whitespace-nowrap">
+                  Lanzar Misión
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- (El resto de cards se mantiene igual, ya está listo para refactorizar a data luego 👀) -->
+
+    </div>
+
+    <!-- FOOTER DE SECCIÓN -->
+    <div class="mt-24 border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-start gap-8 opacity-60">
+      <div class="flex flex-col gap-2">
+        <span class="text-[10px] uppercase tracking-widest font-bold">
+          Conexión Encriptada
+        </span>
+        <span class="text-xs font-mono">
+          ID: SD-ARCV-8829-X // SECTOR: DELTA-9
+        </span>
+      </div>
+
+      <div class="flex items-center gap-12">
+        <div class="flex flex-col items-end">
+          <span class="text-[10px] uppercase tracking-widest font-bold mb-1">
+            Misiones Totales
+          </span>
+          <span class="text-2xl font-black">128</span>
+        </div>
+        <div class="flex flex-col items-end">
+          <span class="text-[10px] uppercase tracking-widest font-bold mb-1">
+            Tasa de Éxito
+          </span>
+          <span class="text-2xl font-black">99.8%</span>
+        </div>
+      </div>
+    </div>
+
+</div>
+</section>
