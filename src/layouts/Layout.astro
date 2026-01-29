@@ -133,6 +133,20 @@ const { description, title } = Astro.props;
     );
   }
 
+  .glass-card {
+    background: rgba(24, 24, 37, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 225, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    border-color: #00e1ff;
+    background: rgba(0, 225, 255, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(0, 225, 255, 0.15);
+  }
+  
+
 
 
 
