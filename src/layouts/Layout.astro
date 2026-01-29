@@ -4,12 +4,15 @@ import '@fontsource/space-grotesk/400.css';
 import '@fontsource/space-grotesk/500.css';
 import '@fontsource/space-grotesk/600.css';
 import '@fontsource/space-grotesk/700.css';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'material-symbols';
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Starfield } from "../components/effects/Starfield";
 
 interface Props {
   title: string;
@@ -36,10 +39,10 @@ const { description, title } = Astro.props;
     <Header />
 	
 	<!-- Fondo nebular -->
-    <div class="fixed inset-0 z-0 pointer-events-none nebula-glow"></div>
+    <div class="fixed inset-0 z-0 nebula-glow"></div>
 
     <!-- Campo de estrellas -->
-    <div class="fixed inset-0 z-0 pointer-events-none opacity-20 star-field"></div>
+    <Starfield client:only="react" />
 
     <!-- Contenido de la página -->
     <div class="relative z-10 flex flex-col min-h-screen">
