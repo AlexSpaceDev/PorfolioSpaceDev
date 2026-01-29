@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'material-symbols';
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -43,6 +44,7 @@ const { description, title } = Astro.props;
     <!-- Contenido de la página -->
     <div class="relative z-10 flex flex-col min-h-screen">
       <slot />
+      <Footer />
     </div>
 
   </body>
