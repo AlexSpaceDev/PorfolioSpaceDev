@@ -1,18 +1,230 @@
 ---
-import Clipboard from "./Clipboard";
+/**
+ * ContactSection.astro
+ * Sección de contacto – Space DEV
+ * No props por ahora (todo está hardcodeado tal como el diseño original)
+ */
 ---
-<div class="flex flex-col items-center gap-y-11">    
-    <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
-      Contacto
-    </h2>
-    <div class="flex flex-col justify-center gap-y-8">
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200">
-      ¿Tienes una idea, proyecto o colaboración en mente?
-      </h3>
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200 [&>strong]:text-SpacePalette-600">
-      <strong>Muchas buenas ideas ven la luz</strong> comenzando con una simple conversación.
-      Si requieres ayuda o conocer más sobre nuestro trabajo, no dudes en contactarnos.
-      </h3>
+
+<section id="contacto" class="pt-32 pb-20 px-6 max-w-6xl mx-auto relative">
+  <!-- Background blobs -->
+  <div class="fixed top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+  <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] -z-10"></div>
+
+  <!-- Header -->
+  <div class="mb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+      </span>
+      Conexión Establecida
     </div>
-    <Clipboard client:load />
+
+    <h1 class="text-5xl md:text-6xl font-black tracking-tighter uppercase mb-4 leading-tight">
+      Inicio de <span class="text-primary">Misión</span>
+    </h1>
+
+    <p class="text-white/50 max-w-xl mx-auto text-sm md:text-base font-light leading-relaxed">
+      Secuencia de Activación de Proyecto. Inicia tu odisea digital configurando los parámetros de tu próxima expedición tecnológica.
+    </p>
+  </div>
+
+  <!-- Form panel -->
+  <div class="glass-panel rounded-2xl relative overflow-hidden">
+    <div class="scanline"></div>
+
+    <form class="p-8 md:p-12 space-y-12">
+      <!-- Sección 01 -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="size-8 flex items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold border border-primary/30">01</span>
+          <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-white/80">
+            Identidad del Comandante
+          </h3>
+          <div class="h-px flex-1 bg-white/10"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Nombre -->
+          <div class="group relative">
+            <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-primary transition-colors">
+              Nombre del Explorador
+            </label>
+            <div class="glow-input bg-white/5 rounded-lg flex items-center px-4">
+              <span class="material-symbols-outlined text-white/20 text-xl mr-3">person</span>
+              <input
+                type="text"
+                required
+                placeholder="Nombre completo"
+                class="w-full bg-transparent border-none py-4 px-0 focus:ring-0 text-white font-light placeholder:text-white/10"
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="group relative">
+            <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-primary transition-colors">
+              Frecuencia de Enlace (Email)
+            </label>
+            <div class="glow-input bg-white/5 rounded-lg flex items-center px-4">
+              <span class="material-symbols-outlined text-white/20 text-xl mr-3">alternate_email</span>
+              <input
+                type="email"
+                required
+                placeholder="comandante@nave.space"
+                class="w-full bg-transparent border-none py-4 px-0 focus:ring-0 text-white font-light placeholder:text-white/10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="space-y-6">
+<div class="flex items-center gap-4 mb-8">
+<span class="size-8 flex items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold border border-primary/30">02</span>
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] text-white/80">Selección de Tipo de Misión</h3>
+<div class="h-px flex-1 bg-white/10"></div>
 </div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<label class="cursor-pointer group">
+<input checked="" class="hidden" name="mission_type" type="radio"/>
+<div class="mission-type-card active flex flex-col items-center justify-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
+<span class="material-symbols-outlined text-4xl text-white/40 group-hover:text-primary">language</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Desarrollo Web</p>
+<p class="text-[8px] text-white/30 uppercase mt-1">Ecosistemas Digitales</p>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden" name="mission_type" type="radio"/>
+<div class="mission-type-card flex flex-col items-center justify-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
+<span class="material-symbols-outlined text-4xl text-white/40 group-hover:text-primary">videogame_asset</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Gaming</p>
+<p class="text-[8px] text-white/30 uppercase mt-1">Experiencias Interactivas</p>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden" name="mission_type" type="radio"/>
+<div class="mission-type-card flex flex-col items-center justify-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
+<span class="material-symbols-outlined text-4xl text-white/40 group-hover:text-primary">vibration</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Mobile Apps</p>
+<p class="text-[8px] text-white/30 uppercase mt-1">Módulos Portátiles</p>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden" name="mission_type" type="radio"/>
+<div class="mission-type-card flex flex-col items-center justify-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
+<span class="material-symbols-outlined text-4xl text-white/40 group-hover:text-primary">view_in_ar</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-white/80">AR/VR/XR</p>
+<p class="text-[8px] text-white/30 uppercase mt-1">Realidad Aumentada</p>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden" name="mission_type" type="radio"/>
+<div class="mission-type-card flex flex-col items-center justify-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
+<span class="material-symbols-outlined text-4xl text-white/40 group-hover:text-primary">settings_suggest</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Otros</p>
+<p class="text-[8px] text-white/30 uppercase mt-1">Requerimientos Especiales</p>
+</div>
+</div>
+</label>
+</div>
+</section>
+<section class="space-y-6">
+<div class="flex items-center gap-4 mb-8">
+<span class="size-8 flex items-center justify-center rounded-full bg-primary/20 text-primary text-xs font-bold border border-primary/30">03</span>
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] text-white/80">Objetivos de la Misión</h3>
+<div class="h-px flex-1 bg-white/10"></div>
+</div>
+<div class="relative group">
+<textarea class="w-full bg-white/5 glow-border-primary rounded-xl p-6 text-white font-light leading-relaxed placeholder:text-white/10 text-sm h-48" placeholder="Describe los parámetros del proyecto, objetivos de la misión y requisitos técnicos..." required=""></textarea>
+<div class="absolute -top-3 right-6 bg-background-dark border border-primary/50 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="size-1.5 bg-primary animate-pulse rounded-full"></span>
+<span class="text-[9px] uppercase tracking-widest text-primary font-bold">Terminal de Entrada de Datos</span>
+</div>
+</div>
+</section>
+<div class="flex flex-col items-center gap-10 pt-8 border-t border-white/5">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-2xl opacity-40">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="text-[9px] uppercase tracking-tighter text-white/60">Atmósfera</span>
+<span class="text-[10px] font-bold text-primary uppercase">Nominal</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="text-[9px] uppercase tracking-tighter text-white/60">Encriptación</span>
+<span class="text-[10px] font-bold text-primary uppercase">AES-256</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="text-[9px] uppercase tracking-tighter text-white/60">Sistemas</span>
+<span class="text-[10px] font-bold text-primary uppercase">Listos</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="text-[9px] uppercase tracking-tighter text-white/60">Protocolo</span>
+<span class="text-[10px] font-bold text-primary uppercase">Activado</span>
+</div>
+</div>
+<button class="group relative flex flex-col items-center gap-4 transition-transform hover:scale-105" type="submit">
+<div class="relative w-64 h-16 flex items-center justify-center overflow-hidden rounded-xl bg-primary text-background-dark font-black uppercase tracking-[0.4em] glow-cyan">
+<span class="relative z-10 flex items-center gap-3">
+                            Lanzar Proyecto
+                            <span class="material-symbols-outlined">rocket_launch</span>
+</span>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-[#a5f3fc] to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<p class="text-[9px] uppercase tracking-[0.3em] text-white/40">Confirmar secuencia de transmisión</p>
+</button>
+</div>
+    </form>
+  </div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-panel p-6 rounded-xl border border-white/5">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<h5 class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Cuartel General</h5>
+</div>
+<p class="text-sm font-light text-white/60">Sector 7G, Base Lunar Uno</p>
+<div class="aspect-video bg-white/5 rounded-lg mt-4 overflow-hidden border border-white/10 opacity-40">
+<div class="w-full h-full bg-cover bg-center grayscale" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_upYGIXVGrJ1eFy8WuvZItYeP8xKOJtNrXQnXY3aOr4rGxOeW257YitlPwGqVcstcV5lEXMyIYwHOz73ceKoADTAJ0YaeSpDNhlsAhZBZSgMsA0H6lS1i42rvR1XwWIEfWo8aY27BMduSYN7a8XRLlhzF5RTda0dCGECVRBHnQQ-kwf7NyS1Gi_rx2HATFzG31esLfSxsYazC3N5T3QTcJOLkpzP8NJFHb2yRRhVnBeBY8X6DVNcqb0TREy_LY_sJmicvMfUXJxQ");'></div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-xl border border-white/5">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-sm">sensors</span>
+<h5 class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Enlace Directo</h5>
+</div>
+<p class="text-sm font-light text-white/60 mb-1">transmision@spacedev.io</p>
+<p class="text-sm font-light text-white/60 mb-4">+1 (800) GAL-AXY1</p>
+<div class="flex gap-2">
+<div class="size-8 rounded bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="size-8 rounded bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<h5 class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Disponibilidad</h5>
+</div>
+<div class="flex items-center gap-2 mb-2">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-sm font-light text-white/60">Ventanas de Lanzamiento Abiertas</span>
+</div>
+</div>
+<button class="w-full py-3 border border-white/10 rounded-lg text-[10px] uppercase tracking-widest text-white/40 hover:bg-white/5 transition-all mt-4">
+                Ver Calendario de Flota
+            </button>
+</div>
+</div>
+</section>
