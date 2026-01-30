@@ -1,0 +1,286 @@
+import React, { useState, useMemo } from 'react';
+import { PROJECTS } from '../constants';
+import { Category, SIGNAL_MAP, type ArchiveFilter } from '../types';
+import type { Project } from '../types';
+
+const Archivos: React.FC = () => {
+  /* --- estado del filtro --- */
+  const [filter, setFilter] = useState<ArchiveFilter>('TODOS');
+  const [expanded, setExpanded] = useState(false);
+
+  /* --- filtrado (copiado conceptualmente de MissionArchive) --- */
+  const displayProjects = useMemo<Project[]>(() => {
+    // Si el filtro es específico → mostrar todos los de esa categoría
+    if (filter !== 'TODOS') {
+      return PROJECTS.filter(p => p.category === filter);
+    }
+
+    // Si es TODOS y está expandido → mostrar todos
+    if (expanded) {
+      return PROJECTS;
+    }
+
+    // TODOS + NO expandido → uno por categoría
+    const oneOfEach: Project[] = [];
+    const usedCategories = new Set<Category>();
+
+  for (const project of PROJECTS) {
+    if (!usedCategories.has(project.category)) {
+      usedCategories.add(project.category);
+      oneOfEach.push(project);
+    }
+
+    // Cortamos cuando ya tenemos 1 por categoría
+    if (usedCategories.size === Object.values(Category).length) {
+      break;
+    }
+  }
+
+    return oneOfEach;
+  }, [filter, expanded]);
+
+  const handleFilterChange = (newFilter: ArchiveFilter) => {
+    setFilter(newFilter);
+    setExpanded(false);
+  }
+
+
+  return (
+    <section id="archivos" className="relative w-full">
+      <div className="flex-1 w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 relative z-10">
+
+        {/* =========================
+            HEADER DE SECCIÓN
+        ========================= */}
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 text-primary mb-2">
+              <span className="h-[1px] w-8 bg-primary"></span>
+              <span className="text-xs font-bold tracking-[0.3em] uppercase">
+                Acceso al archivo concedido
+              </span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase mb-4">
+              Archivos de{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">
+                Misión
+              </span>
+            </h1>
+
+            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-light">
+              Un flujo de datos curado de exploración digital, donde la ingeniería
+              de alta fidelidad se une al diseño visionario.
+            </p>
+          </div>
+
+          <button className="border border-primary/30 hover:border-primary px-6 py-3 rounded-lg flex items-center gap-3 transition-all group">
+            <span className="text-xs font-bold uppercase tracking-widest">
+              Ver Manifiesto
+            </span>
+            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+              arrow_forward
+            </span>
+          </button>
+        </div>
+
+        {/* =========================
+            FILTROS (misma UI, con lógica)
+        ========================= */}
+        <div className="flex gap-3 mb-16 overflow-x-auto pb-4 no-scrollbar">
+          <FilterButton
+            active={filter === 'TODOS'}
+            icon="grid_view"
+            label="TODOS"
+            onClick={() => handleFilterChange('TODOS')}
+          />
+
+          <FilterButton
+            active={filter === Category.WEB}
+            icon="language"
+            label="WEB"
+            onClick={() => handleFilterChange(Category.WEB)}
+          />
+
+          <FilterButton
+            active={filter === Category.GAMING}
+            icon="sports_esports"
+            label="GAMING"
+            onClick={() => handleFilterChange(Category.GAMING)}
+          />
+
+          <FilterButton
+            active={filter === Category.APPS}
+            icon="apps"
+            label="APPS"
+            onClick={() => handleFilterChange(Category.APPS)}
+          />
+
+          <FilterButton
+            active={filter === Category.VR_AR}
+            icon="vrpano"
+            label="VR/AR"
+            onClick={() => handleFilterChange(Category.VR_AR)}
+          />
+        </div>
+
+        {/* =========================
+            CABECERA SEÑAL (UNA SOLA VEZ)
+        ========================= */}
+        <div className="flex items-center gap-2 mb-6">
+          <span className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">
+            SEÑAL {SIGNAL_MAP[filter]}
+          </span>
+          <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">
+            Recibida
+          </span>
+        </div>
+
+        {/* =========================
+            GRID DE ARCHIVOS
+        ========================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {displayProjects.map(project => (
+            <div key={project.id} className="flex flex-col gap-4">
+              <div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${project.image})` }}
+                ></div>
+
+                <div className="scanline"></div>
+
+                <div className="absolute inset-0 mission-overlay flex flex-col justify-end p-8">
+                  <div className="mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
+                    <h3 className="text-2xl font-bold uppercase tracking-tight mb-1">
+                      {project.title}
+                    </h3>
+
+                    <div className="flex gap-2 mb-4">
+                      {project.tags.map(tag => (
+                        <span
+                          key={tag}
+                          className="text-[10px] border border-white/20 px-2 py-0.5 rounded uppercase"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="text-sm text-slate-300 line-clamp-3 max-w-sm mb-6 text-pretty">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                    <div className="flex gap-4">
+                      <div className="flex flex-col">
+                        <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                          Estado
+                        </span>
+                        <span className="text-xs font-bold text-green-400">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                          Tecnología
+                        </span>
+                        <span className="text-xs font-bold">
+                          {project.tech}
+                        </span>
+                      </div>
+                    </div>
+
+                    <button className="bg-primary hover:bg-white text-background-dark h-12 w-12 rounded-lg flex items-center justify-center transition-all group-hover:w-40 overflow-hidden relative">
+                      <span className="material-symbols-outlined text-xl absolute left-3.5">
+                        travel_explore
+                      </span>
+                      <span className="ml-8 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase text-xs whitespace-nowrap">
+                        Explorar Misión
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* =========================
+            BOTÓN MOSTRAR MÁS / MENOS
+        ========================= */}
+        {filter === 'TODOS' && (
+          <div className="flex justify-center pt-12">
+            {!expanded && PROJECTS.length > displayProjects.length ? (
+              <button
+                onClick={() => setExpanded(true)}
+                className="group flex items-center gap-4 px-10 py-5
+                          border border-primary/30 hover:border-primary
+                          rounded-2xl text-[10px] font-black uppercase tracking-[0.3em]
+                          transition-all"
+              >
+                Mostrar más archivos
+                <span className="material-symbols-outlined transition-transform group-hover:rotate-180">
+                  expand_more
+                </span>
+              </button>
+            ) : expanded ? (
+              <button
+                onClick={() => setExpanded(false)}
+                className="group flex items-center gap-4 px-10 py-5
+                          border border-primary/30 hover:border-primary
+                          rounded-2xl text-[10px] font-black uppercase tracking-[0.3em]
+                          transition-all"
+              >
+                Mostrar menos archivos
+                <span className="material-symbols-outlined transition-transform group-hover:rotate-180">
+                  expand_less
+                </span>
+              </button>
+            ) : null}
+          </div>
+        )}
+
+      </div>
+    </section>
+  );
+};
+
+/* =========================
+   Botón reutilizable filtro
+========================= */
+
+const FilterButton = ({
+  icon,
+  label,
+  active,
+  onClick,
+}: {
+  icon: string;
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) => (
+  <div
+    onClick={onClick}
+    className={`flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 cursor-pointer transition-colors
+      ${
+        active
+          ? 'bg-primary text-background-dark'
+          : 'border border-white/10 hover:border-primary/50'
+      }
+    `}
+  >
+    <span className="material-symbols-outlined text-lg">{icon}</span>
+    <p
+      className={`text-sm uppercase tracking-tight ${
+        active ? 'font-bold' : 'font-medium opacity-70'
+      }`}
+    >
+      {label}
+    </p>
+  </div>
+);
+
+export default Archivos;

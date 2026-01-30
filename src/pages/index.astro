@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Manifiesto from '../components/Manifiesto.astro';
 import Matriz from '../components/Matriz.astro';
-import Archivos from '../components/Archivos.astro';
+import Archivos from '../components/Archivos.tsx';
 import Tripulacion from '../components/Tripulacion.astro';
 import Contacto from '../components/Contacto.astro';
 ---
@@ -21,7 +21,7 @@ import Contacto from '../components/Contacto.astro';
     <!-- Matriz -->
     <Matriz />
     <!-- Archivos -->
-    <Archivos />
+    <Archivos client:load/>
     <!-- Equipo -->
     <Tripulacion />
     <!-- Contacto -->
