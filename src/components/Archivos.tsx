@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { PROJECTS } from '../constants';
 import { Category, SIGNAL_MAP, type ArchiveFilter } from '../types';
 import type { Project } from '../types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Archivos: React.FC = () => {
   /* --- estado del filtro --- */
@@ -127,21 +128,51 @@ const Archivos: React.FC = () => {
         {/* =========================
             CABECERA SEÑAL (UNA SOLA VEZ)
         ========================= */}
-        <div className="flex items-center gap-2 mb-6">
-          <span className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">
-            SEÑAL {SIGNAL_MAP[filter]}
-          </span>
-          <span className="text-[10px] font-bold opacity-40 uppercase tracking-widest">
+        <div className="flex items-center gap-2 mb-6 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={filter}
+              initial={{ opacity: 0, y: 6, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: ['blur(2px)', 'blur(0px)', 'blur(1px)', 'blur(0px)'], }}
+              exit={{ opacity: 0, y: -6, filter: 'blur(4px)' }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
+              className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded"
+            >
+              SEÑAL {SIGNAL_MAP[filter]}
+            </motion.span>
+          </AnimatePresence>
+
+          <motion.span
+            key={`status-${filter}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.4 }}
+            transition={{ delay: 0.15, duration: 0.2 }}
+            className="text-[10px] font-bold uppercase tracking-widest"
+          >
             Recibida
-          </span>
+          </motion.span>
         </div>
+
 
         {/* =========================
             GRID DE ARCHIVOS
         ========================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {displayProjects.map(project => (
-            <div key={project.id} className="flex flex-col gap-4">
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            <AnimatePresence>
+              {displayProjects.map(project => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -40 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col gap-4"
+                >
+
               <div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -203,9 +234,11 @@ const Archivos: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+                 </motion.div>
+    ))}
+  </AnimatePresence>
+</motion.div>
+
 
         {/* =========================
             BOTÓN MOSTRAR MÁS / MENOS
