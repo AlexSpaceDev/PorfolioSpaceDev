@@ -144,6 +144,7 @@ const { description, title } = Astro.props;
     border: 1px solid rgba(0, 225, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   .glass-card:hover {
     border-color: #00e1ff;
     background: rgba(0, 225, 255, 0.05);
@@ -188,29 +189,43 @@ const { description, title } = Astro.props;
         .glow-cyan {
             box-shadow: 0 0 25px rgba(0, 225, 255, 0.4);
         }
+
         .glow-input {
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .glow-input:focus-within {
             box-shadow: 0 0 15px rgba(0, 225, 255, 0.3);
             border-color: #00e1ff;
         }
+
         .glow-border-primary {
             border: 2px solid rgba(0, 225, 255, 0.2);
             transition: all 0.3s ease;
         }
+
         .glow-border-primary:focus {
             border-color: #00e1ff;
             box-shadow: 0 0 20px rgba(0, 225, 255, 0.2);
             outline: none;
         }
 
-                .mission-type-card.active {
+        .mission-type-card.active {
             @apply border-primary bg-primary/10;
         }
+
         .mission-type-card.active span.material-symbols-outlined {
             @apply text-primary;
+        }
+
+        .glow-button {
+            box-shadow: 0 0 15px rgba(0, 225, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(0, 225, 255, 0.3);
+            border-color: rgba(0, 225, 255, 0.8);
         }
 
 

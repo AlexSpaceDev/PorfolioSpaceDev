@@ -237,31 +237,66 @@ const Archivos: React.FC = () => {
         {filter === 'TODOS' && (
           <div className="flex justify-center pt-12">
             {!expanded && PROJECTS.length > displayProjects.length ? (
-              <button
-                onClick={() => setExpanded(true)}
-                className="group flex items-center gap-4 px-10 py-5
-                          border border-primary/30 hover:border-primary
-                          rounded-2xl text-[10px] font-black uppercase tracking-[0.3em]
-                          transition-all"
-              >
+             <button
+              onClick={() => setExpanded(true)}
+              className="
+                glow-button glass-card
+                group flex items-center gap-4
+                px-10 md:px-8 py-4
+                rounded-full
+                border border-primary/20
+                bg-background-dark/40 backdrop-blur-md
+                transition-all
+                hover:bg-background-dark/60 hover:scale-[1.02]"
+            >
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-white">
                 Mostrar más archivos
-                <span className="material-symbols-outlined transition-transform group-hover:rotate-180">
-                  expand_more
+              </span>
+
+              <div className="
+                flex items-center justify-center
+                w-6 h-6
+                rounded-full
+                border border-primary/30
+                group-hover:border-primary
+                transition-colors
+              ">
+                <span className="material-symbols-outlined text-lg text-primary animate-bounce pt-1">
+                  keyboard_arrow_down
                 </span>
-              </button>
-            ) : expanded ? (
-              <button
-                onClick={() => setExpanded(false)}
-                className="group flex items-center gap-4 px-10 py-5
-                          border border-primary/30 hover:border-primary
-                          rounded-2xl text-[10px] font-black uppercase tracking-[0.3em]
-                          transition-all"
-              >
+              </div>
+            </button>
+
+              ) : expanded ? (
+            <button
+              onClick={() => setExpanded(false)}
+              className="
+                glow-button glass-card
+                group flex items-center gap-4
+                px-10 md:px-8 py-4
+                rounded-full
+                border border-primary/20
+                bg-background-dark/40 backdrop-blur-md
+                transition-all
+                hover:bg-background-dark/60 hover:scale-[1.02]"
+            >
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-white">
                 Mostrar menos archivos
-                <span className="material-symbols-outlined transition-transform group-hover:rotate-180">
-                  expand_less
+              </span>
+
+              <div className="
+                flex items-center justify-center
+                w-6 h-6
+                rounded-full
+                border border-primary/30
+                group-hover:border-primary
+                transition-colors
+              ">
+                <span className="material-symbols-outlined text-lg text-primary animate-bounce pt-1">
+                  keyboard_arrow_up
                 </span>
-              </button>
+              </div>
+            </button>
             ) : null}
           </div>
         )}
