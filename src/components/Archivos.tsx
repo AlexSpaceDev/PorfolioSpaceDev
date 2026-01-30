@@ -53,36 +53,27 @@ const Archivos: React.FC = () => {
         {/* =========================
             HEADER DE SECCIÓN
         ========================= */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-primary mb-2">
+        <div className="items-end gap-6 mb-12">
+          <div className="max-w-4xl">
+            <div className="flex items-center gap-2 text-primary mb-3">
               <span className="h-[1px] w-8 bg-primary"></span>
               <span className="text-xs font-bold tracking-[0.3em] uppercase">
                 Acceso al archivo concedido
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase mb-4">
-              Archivos de{' '}
+            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tighter uppercase mb-6">
+              {' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">
-                Misión
+                Archivos
               </span>
             </h1>
 
-            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-light">
-              Un flujo de datos curado de exploración digital, donde la ingeniería
-              de alta fidelidad se une al diseño visionario.
+            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-light max-w-3xl text-pretty">
+              Registros de proyectos desarrollados por nuestro estudio creativo
+              que documentan nuestro recorrido, transformando ideas en productos digitales funcionales y memorables.
             </p>
           </div>
-
-          <button className="border border-primary/30 hover:border-primary px-6 py-3 rounded-lg flex items-center gap-3 transition-all group">
-            <span className="text-xs font-bold uppercase tracking-widest">
-              Ver Manifiesto
-            </span>
-            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-              arrow_forward
-            </span>
-          </button>
         </div>
 
         {/* =========================
