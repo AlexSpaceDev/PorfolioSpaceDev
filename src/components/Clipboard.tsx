@@ -1,3 +1,5 @@
+/*
+
 import { useRef, useState } from 'preact/hooks';
 
 export default function ClipboardComponent() {
@@ -69,3 +71,5 @@ export default function ClipboardComponent() {
 
   );
 }
+
+*/
