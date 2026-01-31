@@ -14,7 +14,7 @@ export interface Project {
   image: string;
   tags: string[];
   description: string;
-  status: 'Desplegado' | 'En Vivo' | 'Completado' | 'Prototipo';
+  status: 'En Vivo' | 'Completado' | 'Prototipo';
   tech: string;
   url: string;
 }

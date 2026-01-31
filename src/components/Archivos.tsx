@@ -9,7 +9,7 @@ const Archivos: React.FC = () => {
   const [filter, setFilter] = useState<ArchiveFilter>('TODOS');
   const [expanded, setExpanded] = useState(false);
 
-  /* --- filtrado (copiado conceptualmente de MissionArchive) --- */
+  /* --- filtrado --- */
   const displayProjects = useMemo<Project[]>(() => {
     // Si el filtro es específico → mostrar todos los de esa categoría
     if (filter !== 'TODOS') {
@@ -44,7 +44,6 @@ const Archivos: React.FC = () => {
     setFilter(newFilter);
     setExpanded(false);
   }
-
 
   return (
     <section id="archivos" className="relative w-full">
@@ -153,7 +152,9 @@ const Archivos: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             <AnimatePresence>
-              {displayProjects.map(project => (
+              {displayProjects.map(project => {
+                const isPrototype = project.status === 'Prototipo' || !project.url;
+                return (
                 <motion.div
                   key={project.id}
                   layout
@@ -164,96 +165,124 @@ const Archivos: React.FC = () => {
                   className="flex flex-col gap-4"
                 >
 
-              <div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${project.image})` }}
-                ></div>
+                <div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  ></div>
 
-                <div className="scanline"></div>
+                  <div className="scanline"></div>
 
-                <div className="absolute inset-0 mission-overlay flex flex-col justify-end p-8">
-                  <div className="mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
-                    <h3 className="text-2xl font-bold uppercase tracking-tight mb-1">
-                      {project.title}
-                    </h3>
+                  <div className="absolute inset-0 mission-overlay flex flex-col justify-end p-8">
+                    <div className="mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
+                      <h3 className="text-2xl font-bold uppercase tracking-tight mb-1">
+                        {project.title}
+                      </h3>
 
-                    <div className="flex gap-2 mb-4">
-                      {project.tags.map(tag => (
-                        <span
-                          key={tag}
-                          className="text-[10px] border border-white/20 px-2 py-0.5 rounded uppercase"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                      <div className="flex gap-2 mb-4">
+                        {project.tags.map(tag => (
+                          <span
+                            key={tag}
+                            className="text-[10px] border border-white/20 px-2 py-0.5 rounded uppercase"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <p className="text-sm text-slate-300 line-clamp-3 max-w-sm mb-6 text-pretty">
+                        {project.description}
+                      </p>
                     </div>
 
-                    <p className="text-sm text-slate-300 line-clamp-3 max-w-sm mb-6 text-pretty">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="flex items-center justify-between opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                    <div className="flex gap-4">
-                      <div className="flex flex-col">
-                        <span className="text-[9px] uppercase tracking-tighter opacity-50">
-                          Estado
-                        </span>
-                        <span className="text-xs font-bold text-green-400">
-                          {project.status}
-                        </span>
+                    <div className="flex items-center justify-between opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                      <div className="flex gap-4">
+                        <div className="flex flex-col">
+                          <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                            Estado
+                          </span>
+                          <span
+                            className={`
+                              text-xs font-bold uppercase
+                              ${
+                                project.status === 'En Vivo'
+                                  ? 'text-green-400'
+                                  : project.status === 'Completado'
+                                  ? 'text-blue-400'
+                                  : 'text-amber-400'
+                              }
+                            `}
+                          >
+                            {project.status}
+                          </span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                            Tecnología
+                          </span>
+                          <span className="text-xs font-bold">
+                            {project.tech}
+                          </span>
+                        </div>
                       </div>
-                      <div className="flex flex-col">
-                        <span className="text-[9px] uppercase tracking-tighter opacity-50">
-                          Tecnología
-                        </span>
-                        <span className="text-xs font-bold">
-                          {project.tech}
-                        </span>
-                      </div>
-                    </div>
 
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group"
-                    >
-                      <button
-                        className="
-                          bg-primary hover:bg-white
-                          text-background-dark
-                          h-12 w-12 rounded-lg
-                          flex items-center justify-center
-                          transition-all
-                          group-hover:w-40
-                          overflow-hidden relative
-                        "
-                      >
-                        <span className="material-symbols-outlined text-xl absolute left-3.5">
-                          travel_explore
-                        </span>
-                        <span
+                      {isPrototype ? (
+                        <div
                           className="
-                            ml-8 opacity-0
-                            group-hover:opacity-100
-                            transition-opacity
-                            font-bold uppercase text-xs whitespace-nowrap
+                            h-12 w-12 rounded-lg
+                            flex items-center justify-center
+                            bg-white/5 border border-white/10
+                            text-white/40
+                            cursor-not-allowed
+                            relative
                           "
+                          title="Proyecto en fase de prototipo"
                         >
-                          Explorar Archivo
-                        </span>
-                      </button>
-                    </a>
-
+                          <span className="material-symbols-outlined text-xl">
+                            hourglass_top
+                          </span>
+                        </div>
+                      ) : (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group"
+                        >
+                          <button
+                            className="
+                              bg-primary hover:bg-white
+                              text-background-dark
+                              h-12 w-12 rounded-lg
+                              flex items-center justify-center
+                              transition-all
+                              group-hover:w-40
+                              overflow-hidden relative
+                            "
+                          >
+                            <span className="material-symbols-outlined text-xl absolute left-3.5">
+                              travel_explore
+                            </span>
+                            <span
+                              className="
+                                ml-8 opacity-0
+                                group-hover:opacity-100
+                                transition-opacity
+                                font-bold uppercase text-xs whitespace-nowrap
+                              "
+                            >
+                              Explorar Archivo
+                            </span>
+                          </button>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-                 </motion.div>
-    ))}
-  </AnimatePresence>
-</motion.div>
+                </motion.div>
+              )})}
+            </AnimatePresence>
+          </motion.div>
 
 
         {/* =========================

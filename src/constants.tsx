@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     tags: ['Campaña', 'Web'],
     description:
       'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
+    status: 'En Vivo',
     tech: 'Joomla / JS',
     url: 'https://rompamoseltabu.com/',
   },
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     tags: ['Galería Viva', 'AR'],
     description:
       'Realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, combinando arte, animaciones y tecnología.',
-    status: 'Desplegado',
+    status: 'En Vivo',
     tech: 'Lens Studio / JS',
     url: 'https://www.expreso.ec/guayaquil/arte-interactivo-busca-sensibilizar-enos-salud-mental-213527.html',
   },
