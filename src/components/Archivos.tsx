@@ -154,6 +154,7 @@ const Archivos: React.FC = () => {
             <AnimatePresence>
               {displayProjects.map(project => {
                 const isPrototype = project.status === 'Prototipo' || !project.url;
+                const isInternalLink = project.url?.startsWith('#');
                 return (
                 <motion.div
                   key={project.id}
@@ -233,7 +234,7 @@ const Archivos: React.FC = () => {
                             flex items-center justify-center
                             bg-white/5 border border-white/10
                             text-white/40
-                            cursor-not-allowed
+                            cursor-default
                             relative
                           "
                           title="Proyecto en fase de prototipo"
@@ -242,15 +243,14 @@ const Archivos: React.FC = () => {
                             hourglass_top
                           </span>
                         </div>
-                      ) : (
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group"
-                        >
+                        ) : isInternalLink ? (
                           <button
+                            onClick={() => {
+                              const el = document.querySelector(project.url!);
+                              el?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             className="
+                              group
                               bg-primary hover:bg-white
                               text-background-dark
                               h-12 w-12 rounded-lg
@@ -259,9 +259,10 @@ const Archivos: React.FC = () => {
                               group-hover:w-40
                               overflow-hidden relative
                             "
+                            title="Volver al inicio"
                           >
                             <span className="material-symbols-outlined text-xl absolute left-3.5">
-                              travel_explore
+                              Public
                             </span>
                             <span
                               className="
@@ -271,11 +272,43 @@ const Archivos: React.FC = () => {
                                 font-bold uppercase text-xs whitespace-nowrap
                               "
                             >
-                              Explorar Archivo
+                              Esta Misión
                             </span>
                           </button>
-                        </a>
-                      )}
+                        ) : (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group"
+                          >
+                            <button
+                              className="
+                                bg-primary hover:bg-white
+                                text-background-dark
+                                h-12 w-12 rounded-lg
+                                flex items-center justify-center
+                                transition-all
+                                group-hover:w-40
+                                overflow-hidden relative
+                              "
+                            >
+                              <span className="material-symbols-outlined text-xl absolute left-3.5">
+                                travel_explore
+                              </span>
+                              <span
+                                className="
+                                  ml-8 opacity-0
+                                  group-hover:opacity-100
+                                  transition-opacity
+                                  font-bold uppercase text-xs whitespace-nowrap
+                                "
+                              >
+                                Explorar Archivo
+                              </span>
+                            </button>
+                          </a>
+                        )}
                     </div>
                   </div>
                 </div>
