@@ -1,4 +1,7 @@
 ---
+import '../styles/globals.css';
+import '../styles/effects.css';
+
 import '@fontsource/space-grotesk/300.css';
 import '@fontsource/space-grotesk/400.css';
 import '@fontsource/space-grotesk/500.css';
@@ -68,167 +71,22 @@ const { description, title } = Astro.props;
     min-height: 100vh;
   }
 
-  /* Fondo nebular */
-  .nebula-glow {
-    background:
-      radial-gradient(circle at 80% 20%, rgba(127, 0, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 10% 80%, rgba(0, 225, 255, 0.1) 0%, transparent 50%);
-    filter: blur(80px);
-  }
-
-  /* Campo de estrellas */
-  .star-field {
-    background-image: radial-gradient(
-      white,
-      rgba(255, 255, 255, 0.2) 2px,
-      transparent 40px
-    );
-    background-size: 550px 550px;
-  }
-
-  /* Glass panel */
-  .glass-panel {
-    background: rgba(24, 24, 37, 0.6);
-    backdrop-filter: blur(12px);
-    border: 0.5px solid rgba(0, 225, 255, 0.2);
-  }
-
-  .glass-panel-hover {
-    transition: border-color 0.4s ease, transform 0.4s ease;
-  }
-
-  .glass-panel-hover:hover {
-    border-color: rgba(0, 225, 255, 0.5);
-    transform: translateY(-2px);
-  }
-
   .data-stream-text {
     @apply font-mono text-[10px] tracking-widest uppercase text-primary/60;
   }
 
-  .material-symbols-outlined {
-    font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48;
-    line-height: 1;
-    display: inline-block;
+  .social-icon-glow {
+    @apply transition-all duration-300 hover:text-primary;
+    filter: drop-shadow(0 0 2px rgba(0, 225, 255, 0.3));
   }
 
-  .material-symbols-outlined.icon-web-hero {
-	  font-size: 200px;
-	  font-variation-settings:
-		  'FILL' 0,
-		  'wght' 400,
-		  'GRAD' 0,
-		  'opsz' 200;
+  .mission-type-card.active {
+    @apply border-primary bg-primary/10;
   }
 
-  .glow-text {
-    text-shadow: 0 0 30px rgba(0, 225, 255, 0.4);
+  .mission-type-card.active span.material-symbols-outlined {
+    @apply text-primary;
   }
-
-  .hud-line {
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 225, 255, 0.4),
-      transparent
-    );
-  }
-
-  .glass-card {
-    background: rgba(24, 24, 37, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 225, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .glass-card:hover {
-    border-color: #00e1ff;
-    background: rgba(0, 225, 255, 0.05);
-    transform: translateY(-4px);
-    box-shadow: 0 0 30px rgba(0, 225, 255, 0.15);
-  }
-  
-  .scanline {
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #00e1ff, transparent);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-  }
-
-  .mission-overlay {
-    background: linear-gradient(0deg, rgba(5, 10, 15, 0.95) 0%, rgba(5, 10, 15, 0.4) 100%);
-  }
-
-          .neon-glow:hover {
-            box-shadow: 0 0 20px rgba(0, 225, 255, 0.3);
-            border-color: rgba(0, 225, 255, 0.5);
-        }
-        .portrait-filter {
-            filter: grayscale(100%) brightness(0.8) contrast(1.2);
-            mix-blend-mode: screen;
-        }
-        .cyan-tint {
-            background-color: rgba(0, 225, 255, 0.2);
-        }
-
-                .social-icon-glow {
-            @apply transition-all duration-300 hover:text-primary;
-            filter: drop-shadow(0 0 2px rgba(0, 225, 255, 0.3));
-        }
-        .social-icon-glow:hover {
-            filter: drop-shadow(0 0 8px rgba(0, 225, 255, 0.8));
-        }
-
-        .glow-cyan {
-            box-shadow: 0 0 25px rgba(0, 225, 255, 0.4);
-        }
-
-        .glow-input {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .glow-input:focus-within {
-            box-shadow: 0 0 15px rgba(0, 225, 255, 0.3);
-            border-color: #00e1ff;
-        }
-
-        .glow-border-primary {
-            border: 2px solid rgba(0, 225, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .glow-border-primary:focus {
-            border-color: #00e1ff;
-            box-shadow: 0 0 20px rgba(0, 225, 255, 0.2);
-            outline: none;
-        }
-
-        .mission-type-card.active {
-            @apply border-primary bg-primary/10;
-        }
-
-        .mission-type-card.active span.material-symbols-outlined {
-            @apply text-primary;
-        }
-
-        .glow-button {
-            box-shadow: 0 0 15px rgba(0, 225, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .glow-button:hover {
-            box-shadow: 0 0 25px rgba(0, 225, 255, 0.3);
-            border-color: rgba(0, 225, 255, 0.8);
-        }
-
-
 
   @media (prefers-reduced-motion: reduce) {
     html {
