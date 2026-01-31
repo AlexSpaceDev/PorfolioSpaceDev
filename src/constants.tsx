@@ -13,6 +13,7 @@ export const PROJECTS: Project[] = [
       'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
     status: 'Desplegado',
     tech: 'Joomla / JS',
+    url: 'https://rompamoseltabu.com/',
   },
 
   {
@@ -25,6 +26,7 @@ export const PROJECTS: Project[] = [
       'Creadores de Spacedev.me, presentando nuestra marca/estudio dentro de una experiencia web fluida, accesible y cósmica.',
     status: 'En Vivo',
     tech: 'Astro / React / TailwindCSS / TS',
+    url: '#inicio',
   },
 
     // GAMING Projects
@@ -38,6 +40,7 @@ export const PROJECTS: Project[] = [
       'Videojuego en realidad virtual, una experiencia que explora los desafíos de la migración. Juego ganador del GameJam VRDay Latam 2022.',
     status: 'Completado',
     tech: 'Unreal',
+    url: 'https://www.behance.net/gallery/166470549/Trazando-Pasos-(videojuego-VR)-(2023)',
   },
 
   {
@@ -48,8 +51,9 @@ export const PROJECTS: Project[] = [
     tags: ['Cultura', 'Móvil', 'Gaming'],
     description:
       'Videojuego de cocina en 2D para móviles sobre gastronomía ecuatoriana, recetas tradicionales con el plátano como ingrediente principal.',
-    status: 'Desplegado',
+    status: 'Completado',
     tech: 'Unreal',
+    url: 'https://www.behance.net/gallery/166470549/Trazando-Pasos-(videojuego-VR)-(2023)',
   },
 
 
@@ -64,6 +68,7 @@ export const PROJECTS: Project[] = [
       'Aplicación móvil para el cuidado y seguimiento de mascotas, con recordatorios de vacunas, citas veterinarias y alimentación.',
     status: 'Prototipo',
     tech: 'Flutter / Supabase',
+    url: '',
   },
 
     // VR_AR Projects
@@ -77,6 +82,7 @@ export const PROJECTS: Project[] = [
       'Realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, combinando arte, animaciones y tecnología.',
     status: 'Desplegado',
     tech: 'Lens Studio / JS',
+    url: 'https://www.expreso.ec/guayaquil/arte-interactivo-busca-sensibilizar-enos-salud-mental-213527.html',
   },
 
 
@@ -90,6 +96,7 @@ export const PROJECTS: Project[] = [
       'Simulación de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura.',
     status: 'Completado',
     tech: 'Unity / C# / Meta Quest 2',
+    url: 'https://www.canva.com/design/DAGQfhKZAcg/fuZ0j9mHAswxeGnv_saAdw/edit?utm_content=DAGQfhKZAcg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
   },
 
   

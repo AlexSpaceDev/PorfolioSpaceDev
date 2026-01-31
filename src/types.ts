@@ -16,6 +16,7 @@ export interface Project {
   description: string;
   status: 'Desplegado' | 'En Vivo' | 'Completado' | 'Prototipo';
   tech: string;
+  url: string;
 }
 
 export const SIGNAL_MAP: Record<ArchiveFilter, string> = {

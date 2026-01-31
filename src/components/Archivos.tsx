@@ -214,14 +214,39 @@ const Archivos: React.FC = () => {
                       </div>
                     </div>
 
-                    <button className="bg-primary hover:bg-white text-background-dark h-12 w-12 rounded-lg flex items-center justify-center transition-all group-hover:w-40 overflow-hidden relative">
-                      <span className="material-symbols-outlined text-xl absolute left-3.5">
-                        travel_explore
-                      </span>
-                      <span className="ml-8 opacity-0 group-hover:opacity-100 transition-opacity font-bold uppercase text-xs whitespace-nowrap">
-                        Explorar Misión
-                      </span>
-                    </button>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group"
+                    >
+                      <button
+                        className="
+                          bg-primary hover:bg-white
+                          text-background-dark
+                          h-12 w-12 rounded-lg
+                          flex items-center justify-center
+                          transition-all
+                          group-hover:w-40
+                          overflow-hidden relative
+                        "
+                      >
+                        <span className="material-symbols-outlined text-xl absolute left-3.5">
+                          travel_explore
+                        </span>
+                        <span
+                          className="
+                            ml-8 opacity-0
+                            group-hover:opacity-100
+                            transition-opacity
+                            font-bold uppercase text-xs whitespace-nowrap
+                          "
+                        >
+                          Explorar Archivo
+                        </span>
+                      </button>
+                    </a>
+
                   </div>
                 </div>
               </div>
