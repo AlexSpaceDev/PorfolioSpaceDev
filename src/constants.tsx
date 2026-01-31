@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     id: 'rompamos-el-tabu-web',
     title: 'Rompamos el Tabú',
     category: Category.WEB,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
+    image: '/projectsWeb/PW_Rompamostabu.webp',
     tags: ['Campaña', 'Web'],
     description:
       'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
@@ -20,91 +20,76 @@ export const PROJECTS: Project[] = [
     title: 'Space DEV',
     category: Category.WEB,
     image: '/projectsWeb/PW_Spacedev.webp',
-    tags: ['Campaña', 'Web'],
+    tags: ['Estudio Creativo', 'Web'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
-    tech: 'Joomla / JS',
+      'Creadores de Spacedev.me, presentando nuestra marca/estudio dentro de una experiencia web fluida, accesible y cósmica.',
+    status: 'En Vivo',
+    tech: 'Astro / React / TailwindCSS / TS',
   },
 
     // GAMING Projects
   {
-    id: 'rompamos-el-tabu-gaming-1',
-    title: 'Rompamos el Tabú',
+    id: 'trazando-pasos',
+    title: 'Trazando Pasos',
     category: Category.GAMING,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'Gaming'],
+    image: '/projectsVideogames/PV_TrazandoPasos.webp',
+    tags: ['GameJam', 'PC', 'Gaming'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
-    tech: 'Joomla / JS',
+      'Videojuego en realidad virtual, una experiencia que explora los desafíos de la migración. Juego ganador del GameJam VRDay Latam 2022.',
+    status: 'Completado',
+    tech: 'Unreal',
   },
 
-
   {
-    id: 'rompamos-el-tabu-gaming-2',
-    title: 'Rompamos el Tabú',
+    id: 'plantain-feast',
+    title: 'Plantain Feast',
     category: Category.GAMING,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'Gaming'],
+    image: '/projectsVideogames/PV_PlantainFeast.webp',
+    tags: ['Cultura', 'Móvil', 'Gaming'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
+      'Videojuego de cocina en 2D para móviles sobre gastronomía ecuatoriana, recetas tradicionales con el plátano como ingrediente principal.',
     status: 'Desplegado',
-    tech: 'Joomla / JS',
+    tech: 'Unreal',
   },
 
 
     // APPS Projects
   {
-    id: 'rompamos-el-tabu-apps-1',
-    title: 'Rompamos el Tabú',
+    id: 'pets',
+    title: 'Pets',
     category: Category.APPS,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'Apps'],
+    image: '/projectsApps/PA_Pets.webp',
+    tags: ['Mascotas', 'Apps'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
-    tech: 'Joomla / JS',
+      'Aplicación móvil para el cuidado y seguimiento de mascotas, con recordatorios de vacunas, citas veterinarias y alimentación.',
+    status: 'Prototipo',
+    tech: 'Flutter / Supabase',
   },
-
-
-  {
-    id: 'rompamos-el-tabu-apps-2',
-    title: 'Rompamos el Tabú',
-    category: Category.APPS,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'Apps'],
-    description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
-    tech: 'Joomla / JS',
-  },
-
 
     // VR_AR Projects
   {
-    id: 'rompamos-el-tabu-vr-1',
-    title: 'Rompamos el Tabú',
+    id: 'alerta-ar',
+    title: 'ALERTA!',
     category: Category.VR_AR,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'VR'],
+    image: '/projectsXR/PX_Alerta.webp',
+    tags: ['Galería Viva', 'AR'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
+      'Realidad aumentada para Alerta! Reflexiones gráficas en torno a la salud mental, combinando arte, animaciones y tecnología.',
     status: 'Desplegado',
-    tech: 'Joomla / JS',
+    tech: 'Lens Studio / JS',
   },
 
 
   {
-    id: 'rompamos-el-tabu-vr-2',
-    title: 'Rompamos el Tabú',
+    id: 'simulacion-de-soldadura-vr',
+    title: 'Simulación de Soldadura VR',
     category: Category.VR_AR,
-    image: '/projectsWeb/PW_Rompamoseltabu.webp',
-    tags: ['Campaña', 'AR'],
+    image: '/projectsXR/PX_SimulacionSoldadura.webp',
+    tags: ['Capacitación', 'VR'],
     description:
-      'Web dedicada a la educación y concienciación sobre la salud y prevención de enfermedades de transmisión sexual (ETS) en jóvenes.',
-    status: 'Desplegado',
-    tech: 'Joomla / JS',
+      'Simulación de soldadura en realidad virtual para Meta Quest 2, que guía a los usuarios a través de cada paso del proceso de soldadura.',
+    status: 'Completado',
+    tech: 'Unity / C# / Meta Quest 2',
   },
 
   
