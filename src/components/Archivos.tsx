@@ -68,7 +68,7 @@ const Archivos: React.FC = () => {
               </span>
             </h1>
 
-            <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed font-light max-w-3xl text-pretty">
+            <p className="text-slate-300 dark:text-slate-400 text-lg leading-relaxed font-light max-w-3xl text-pretty">
               Registros de proyectos desarrollados por nuestro estudio creativo
               que documentan nuestro recorrido, transformando ideas en productos digitales funcionales y memorables.
             </p>
@@ -199,7 +199,7 @@ const Archivos: React.FC = () => {
                     <div className="flex items-center justify-between opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
                       <div className="flex gap-4">
                         <div className="flex flex-col">
-                          <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                          <span className="text-[11px] uppercase tracking-tighter opacity-80">
                             Estado
                           </span>
                           <span
@@ -218,7 +218,7 @@ const Archivos: React.FC = () => {
                           </span>
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[9px] uppercase tracking-tighter opacity-50">
+                          <span className="text-[11px] uppercase tracking-tighter opacity-90">
                             Tecnología
                           </span>
                           <span className="text-xs font-bold">
