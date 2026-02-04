@@ -123,6 +123,36 @@ export default {
 					'0%, 100%': { transform: 'translateY(0)', opacity: '0.6' },
 					'50%': { transform: 'translateY(10px)', opacity: '1' },
 				},
+
+				scan: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' },
+				},
+
+				distort: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-2px)' },
+				},
+
+				contact: {
+					'0%':   { opacity: '0', transform: 'scale(0.8)' },
+
+					/* aparición */
+					'10%':  { opacity: '1', transform: 'scale(1.2)' },
+					'20%':  { opacity: '0.6', transform: 'scale(1)' },
+
+					/* destello 2 */
+					'30%':  { opacity: '1', transform: 'scale(1.3)' },
+					'40%':  { opacity: '0.7', transform: 'scale(1)' },
+
+					/* destello 3 */
+					'50%':  { opacity: '1', transform: 'scale(1.4)' },
+					'60%':  { opacity: '0.8', transform: 'scale(1)' },
+
+					/* desaparición */
+					'75%':  { opacity: '0', transform: 'scale(0.6)' },
+					'100%': { opacity: '0', transform: 'scale(0.6)' },
+				},
 			},
 
 			animation: {
@@ -149,6 +179,7 @@ export default {
 				fadeIn: "fadeIn 0.8s ease-out forwards",
 
 				'bounce-slow': 'bounce-slow 3s infinite',
+				contact: 'contact 7s ease-in-out infinite',
 			},
 						
 			colors:{
