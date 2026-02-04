@@ -1,5 +1,7 @@
 ---
 import DirectLink from '../components/DirectLink.tsx';
+import ContactForm from '../components/ContactForm.tsx';
+import { actions } from "astro:actions";
 ---
 
 <section id="contacto" class="py-20 lg:py-36 px-6 max-w-6xl mx-auto relative">
@@ -26,176 +28,13 @@ import DirectLink from '../components/DirectLink.tsx';
     </p>
   </div>
 
-  <!-- Form panel -->
-  <div class="glass-panel rounded-2xl relative overflow-hidden">
-    <div class="scanline"></div>
+<form
+  method="POST"
+  action={actions.submitContact}
+>
+  <ContactForm client:load />
+</form>
 
-    <form class="p-8 md:p-10 space-y-16">
-
-      <!-- Sección 01 -->
-      <section class="space-y-4">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="size-6 flex items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] opacity-40 border border-primary/20">
-            01
-          </span>
-          <h3 class="text-sm font-bold uppercase tracking-[0.25em] text-white/70">
-            Identidad del Nuevo Comandante
-          </h3>
-          <div class="h-px flex-1 bg-white/10"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Nombre -->
-          <div class="group relative">
-            <label class="block text-xs uppercase tracking-widest text-white/60 mb-4 group-focus-within:text-primary transition-colors">
-              Nombre del Explorador
-            </label>
-            <div class="glow-input bg-white/5 rounded-lg flex items-center px-4">
-              <span class="material-symbols-outlined text-white/20 text-xs mr-3">person</span>
-              <input
-                type="text"
-                required
-                placeholder="Nombre completo"
-                class="w-full bg-transparent border-none py-3 px-0 focus:ring-0 text-white font-light placeholder:text-white/30"
-              />
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="group relative">
-            <label class="block text-xs uppercase tracking-widest text-white/60 mb-4 group-focus-within:text-primary transition-colors">
-              Frecuencia de Enlace (Email)
-            </label>
-            <div class="glow-input bg-white/5 rounded-lg flex items-center px-4">
-              <span class="material-symbols-outlined text-white/20 text-xs mr-3">alternate_email</span>
-              <input
-                type="email"
-                required
-                placeholder="comandante@nave.space"
-                class="w-full bg-transparent border-none py-3 px-0 focus:ring-0 text-white font-light placeholder:text-white/30"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sección 02 -->
-      <section class="space-y-4">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="size-6 flex items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] opacity-40 border border-primary/20">
-            02
-          </span>
-          <h3 class="text-sm font-bold uppercase tracking-[0.25em] text-white/70">
-            Selección de Tipo de Misión
-          </h3>
-          <div class="h-px flex-1 bg-white/10"></div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-          <label class="cursor-pointer group">
-            <input checked class="hidden" name="mission_type" type="radio" />
-            <div class="mission-type-card active flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
-              <span class="material-symbols-outlined text-3xl text-white/40 group-hover:text-primary">language</span>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Desarrollo Web</p>
-              <!--  <p class="text-[10px] text-white/40 uppercase mt-1">Ecosistemas Digitales</p> -->
-              </div>
-            </div>
-          </label>
-
-          <label class="cursor-pointer group">
-            <input class="hidden" name="mission_type" type="radio" />
-            <div class="mission-type-card flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
-              <span class="material-symbols-outlined text-3xl text-white/40 group-hover:text-primary">videogame_asset</span>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Gaming</p>
-                <!-- <p class="text-[8px] text-white/30 uppercase mt-1">Experiencias Interactivas</p> -->
-              </div>
-            </div>
-          </label>
-
-          <label class="cursor-pointer group">
-            <input class="hidden" name="mission_type" type="radio" />
-            <div class="mission-type-card flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
-              <span class="material-symbols-outlined text-3xl text-white/40 group-hover:text-primary">vibration</span>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Mobile Apps</p>
-                <!--<p class="text-[8px] text-white/30 uppercase mt-1">Módulos Portátiles</p> -->
-              </div>
-            </div>
-          </label>
-
-          <label class="cursor-pointer group">
-            <input class="hidden" name="mission_type" type="radio" />
-            <div class="mission-type-card flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
-              <span class="material-symbols-outlined text-3xl text-white/40 group-hover:text-primary">view_in_ar</span>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-white/80">AR/VR</p>
-               <!-- <p class="text-[8px] text-white/30 uppercase mt-1">Realidad Aumentada</p> -->
-              </div>
-            </div>
-          </label>
-
-          <label class="cursor-pointer group">
-            <input class="hidden" name="mission_type" type="radio" />
-            <div class="mission-type-card flex flex-col items-center justify-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-all text-center h-full">
-              <span class="material-symbols-outlined text-3xl text-white/40 group-hover:text-primary">settings_suggest</span>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest text-white/80">Otros</p>
-              <!--   <p class="text-[8px] text-white/30 uppercase mt-1">Requerimientos Especiales</p> -->
-              </div>
-            </div>
-          </label>
-        </div>
-      </section>
-
-      <!-- Sección 03 -->
-      <section class="space-y-4">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="size-6 flex items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] opacity-40 border border-primary/20">
-            03
-          </span>
-          <h3 class="text-sm font-bold uppercase tracking-[0.25em] text-white/70">
-            Objetivos de la Misión
-          </h3>
-          <div class="h-px flex-1 bg-white/10"></div>
-        </div>
-
-        <div class="relative group">
-          <textarea
-            class="w-full bg-white/5 glow-border-primary rounded-xl p-5 text-white font-light leading-relaxed placeholder:text-white/30 text-base h-32"
-            placeholder="Describe tu proyecto, objetivos y cualquier detalle"
-            required
-          ></textarea>
-
-          <div class="absolute -top-3 right-6 bg-background-dark border border-primary/50 px-3 py-1 rounded-full flex items-center gap-2">
-            <span class="size-1.5 bg-primary animate-pulse rounded-full"></span>
-            <span class="text-[9px] uppercase tracking-widest text-primary font-bold">
-              Terminal de Entrada de Datos
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Estados del sistema -->
-      <div class="flex flex-col items-center">
-
-        <button class="group relative flex flex-col items-center gap-3 transition-transform hover:scale-105" type="submit">
-          <div class="relative w-auto h-14 flex items-center justify-center overflow-hidden rounded-xl bg-primary text-background-dark font-black uppercase tracking-[0.4em] glow-cyan">
-            <span class="relative z-10 m-10 flex items-center gap-1">
-              Lanzar Proyecto
-              <span class="material-symbols-outlined">rocket_launch</span>
-            </span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-[#a5f3fc] to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-          <p class="text-[10px] uppercase tracking-[0.3em] text-white/50">
-            Confirmar secuencia de transmisión
-          </p>
-        </button>
-      </div>
-
-    </form>
-  </div>
 
 
 
