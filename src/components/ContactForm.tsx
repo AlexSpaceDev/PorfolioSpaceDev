@@ -150,11 +150,12 @@ export default function ContactForm() {
           >
             <div className="relative h-14 flex items-center justify-center overflow-hidden rounded-xl bg-primary text-background-dark font-black uppercase tracking-[0.4em] glow-cyan px-10">
               <span className="relative z-10 flex items-center gap-1">
-                Lanzar Proyecto
+                Lanzar Misión
                 <span className="material-symbols-outlined">
                   rocket_launch
                 </span>
               </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-[#a5f3fc] to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/50">
               Confirmar secuencia de transmisión

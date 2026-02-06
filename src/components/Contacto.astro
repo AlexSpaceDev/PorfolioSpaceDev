@@ -28,15 +28,13 @@ import { actions } from "astro:actions";
     </p>
   </div>
 
-<form
-  method="POST"
-  action={actions.submitContact}
->
-  <ContactForm client:load />
-</form>
-
-
-
+  <!-- Formulario -->
+  <form
+    method="POST"
+    action={actions.submitContact}
+  >
+    <ContactForm client:load />
+  </form>
 
   <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 
