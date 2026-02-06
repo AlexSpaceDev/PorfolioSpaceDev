@@ -102,3 +102,18 @@
   border-color: rgba(0, 225, 255, 0.8);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+
+  /* Elimina TODO shadow previo */
+  box-shadow: none !important;
+
+  /* Reaplica SOLO el fondo deseado */
+  background-color: transparent !important;
+
+  transition: background-color 9999s ease-in-out 0s;
+}

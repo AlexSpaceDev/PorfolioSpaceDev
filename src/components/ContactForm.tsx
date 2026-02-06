@@ -4,6 +4,11 @@ export default function ContactForm() {
   const [missionType, setMissionType] = useState("web");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [showForm, setShowForm] = useState(true);
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
 
   useEffect(() => {
     if (status !== "sent") return;
@@ -17,9 +22,37 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("sending");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const newErrors: typeof errors = {};
+
+    if (name.length < 2) {
+      newErrors.name = "El nombre debe tener al menos 2 caracteres";
+    }
+
+    if (!email.includes("@")) {
+      newErrors.email = "Frecuencia inválida. Revisa el email";
+    }
+
+    if (message.length < 10) {
+      newErrors.message = "Describe la misión con al menos 10 caracteres";
+    }
+
+    // 🚫 Si hay errores, NO se envía
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // ✅ Todo OK → seguimos flujo normal
+    setErrors({});
+    setStatus("sending");
 
     try {
       const res = await fetch("/_actions/submitContact", {
@@ -34,6 +67,7 @@ export default function ContactForm() {
       setStatus("error");
     }
   }
+
 
   return (
     <div className="relative">
@@ -78,9 +112,16 @@ export default function ContactForm() {
                       name="name"
                       required
                       placeholder="Nombre completo"
-                      className="w-full bg-transparent border-none py-3 px-0 focus:ring-0 text-white font-light placeholder:text-white/30"
+                      className="w-full bg-transparent border-none py-3 px-0 text-white font-light placeholder:text-white/30 focus:outline-none focus-visible:outline-none
+                        outline-none ring-0 focus:ring-0"
                     />
                   </div>
+                    {errors.name && (
+                      <p className="mt-2 text-[10px] uppercase tracking-widest text-red-400 flex items-center gap-1">
+                        <span className="material-symbols-outlined text-xs">error</span>
+                        {errors.name}
+                      </p>
+                    )}
                 </div>
 
                 {/* Email */}
@@ -97,9 +138,19 @@ export default function ContactForm() {
                       name="email"
                       required
                       placeholder="comandante@nave.space"
-                      className="w-full bg-transparent border-none py-3 px-0 focus:ring-0 text-white font-light placeholder:text-white/30"
+                      className="w-full bg-transparent border-none py-3 px-0 text-white font-light placeholder:text-white/30 focus:outline-none focus-visible:outline-none
+                        outline-none ring-0 focus:ring-0"
+                      onChange={() =>
+                        errors.email && setErrors((e) => ({ ...e, email: undefined }))
+                      }
                     />
                   </div>
+                  {errors.email && (
+                    <p className="mt-2 text-[10px] uppercase tracking-widest text-red-400 flex items-center gap-1">
+                      <span className="material-symbols-outlined text-xs">error</span>
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
               </div>
             </section>
@@ -172,6 +223,9 @@ export default function ContactForm() {
                   required
                   placeholder="Describe tu proyecto, objetivos y cualquier detalle"
                   className="w-full bg-white/5 glow-border-primary rounded-xl p-5 text-white font-light leading-relaxed placeholder:text-white/30 text-base h-32"
+                  onChange={() =>
+                    errors.message && setErrors((e) => ({ ...e, message: undefined }))
+                  }
                 />
 
                 {/* Terminal de Entrada de Datos */}
@@ -181,6 +235,14 @@ export default function ContactForm() {
                     Terminal de Entrada de Datos
                   </span>
                 </div>
+
+                {errors.message && (
+                  <p className="mt-3 text-[11px] uppercase tracking-widest text-red-400 flex items-center gap-2 animate-fade-in">
+                    <span className="material-symbols-outlined text-sm">report</span>
+                    {errors.message}
+                  </p>
+                )}
+
               </div>
             </section>
 
