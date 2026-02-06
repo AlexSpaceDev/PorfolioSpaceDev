@@ -1,7 +1,6 @@
 ---
 import DirectLink from '../components/DirectLink.tsx';
 import ContactForm from '../components/ContactForm.tsx';
-import { actions } from "astro:actions";
 ---
 
 <section id="contacto" class="py-20 lg:py-36 px-6 max-w-6xl mx-auto relative">
@@ -29,12 +28,7 @@ import { actions } from "astro:actions";
   </div>
 
   <!-- Formulario -->
-  <form
-    method="POST"
-    action={actions.submitContact}
-  >
-    <ContactForm client:load />
-  </form>
+  <ContactForm client:load />
 
   <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 
