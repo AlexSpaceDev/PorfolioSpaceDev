@@ -1,5 +1,5 @@
 
-<section id="inicio" class="relative w-full pt-36 pb-40 px-6">
+<section id="inicio" class="relative w-full pt-44 pb-32 px-6">
   <div class="flex items-center justify-center">
     <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -101,57 +101,68 @@
           <!-- Pantalla / Preview -->
           <div class="relative z-10 w-full aspect-[3/2] rounded-xl overflow-hidden border border-primary/30 bg-black/50">
 
-            <!-- Imagen -->
+            <!-- Imagen (BASE) -->
             <div
-              class="absolute inset-0 bg-[url('/projectsApps/PA_Pets.webp')] 
+              class="absolute inset-0 z-10
+                    bg-[url('/projectsApps/PA_Pets.webp')]
                     bg-cover bg-center
                     transition-all duration-700
-                    opacity-90 grayscale
-                    group-hover:opacity-100 group-hover:grayscale-0">
+                    opacity-[0.4] grayscale
+                    group-hover:opacity-100
+                    group-hover:grayscale-0
+                    group-hover:scale-110
+                    group-hover:skew-x-[0.5deg]">
             </div>
 
             <!-- Overlay azul / señal -->
-            <div class="absolute inset-0 bg-primary/15"></div>
+            <div class="absolute inset-0 z-20 bg-primary/15"></div>
 
             <!-- Scanlines -->
-            <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[length:100%_4px] opacity-30"></div>
+            <div class="absolute inset-0 z-30
+                        bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                        bg-[length:100%_4px]
+                        opacity-30">
+            </div>
 
-            <!-- Glow de pantalla -->
-            <div class="absolute inset-0 ring-1 ring-primary/40 shadow-[0_0_35px_rgba(0,225,255,0.25)]"></div>
+            <!-- Glitch (interferencia vertical) -->
+            <div class="absolute inset-0 z-40 pointer-events-none
+                        bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,225,255,0.2)_50%,transparent_100%)]
+                        bg-[length:100%_6px]
+                        animate-glitch
+                        opacity-60
+                        mix-blend-screen">
+            </div>
+
+            <!-- Glow de pantalla (MARCO FINAL) -->
+            <div class="absolute inset-0 z-60
+                        ring-1 ring-primary/40
+                        shadow-[0_0_35px_rgba(0,225,255,0.25)]">
+            </div>
+
           </div>
 
-  <!-- Info del proyecto (controles) -->
-  <div class="glass-panel rounded-lg p-4 flex items-center gap-4 z-20">
-    <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-      <span class="material-symbols-outlined text-primary text-sm">
-        phone_iphone
-      </span>
-    </div>
-    <div>
-      <p class="text-[10px] text-gray-400 uppercase tracking-tighter">
-        PROYECTO ACTUAL
-      </p>
-      <p class="text-xs font-bold uppercase tracking-widest">
-        PROTOCOLO PETS
-      </p>
-    </div>
-  </div>
+          <!-- Info del proyecto (controles) -->
+          <div class="glass-panel rounded-lg p-4 flex items-center gap-4 z-20">
+            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-sm">
+                phone_iphone
+              </span>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-400 uppercase tracking-tighter">
+                PROYECTO ACTUAL
+              </p>
+              <p class="text-xs font-bold uppercase tracking-widest">
+                PROTOCOLO PETS
+              </p>
+            </div>
+          </div>
 
-</div>
-
-
+        </div>
 
       </div>
     </div>
   </div>
 
-  <!-- Indicador scroll -->
-  <div class="absolute bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer animate-bounce-slow">
-    <span class="text-primary text-[10px] font-bold tracking-[0.4em] uppercase font-mono">
-      DESCUBRE
-    </span>
-    <span class="material-symbols-outlined text-primary text-3xl drop-shadow-[0_0_8px_rgba(0,225,255,0.6)]">
-      expand_more
-    </span>
-  </div>
+
 </section>

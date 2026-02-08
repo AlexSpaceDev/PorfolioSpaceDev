@@ -153,6 +153,12 @@ export default {
 					'75%':  { opacity: '0', transform: 'scale(0.6)' },
 					'100%': { opacity: '0', transform: 'scale(0.6)' },
 				},
+
+				glitch: {
+					'0%':   { transform: 'translateY(0)' },
+					'50%':  { transform: 'translateY(-6px)' },
+					'100%': { transform: 'translateY(0)' },
+				},
 			},
 
 			animation: {
@@ -180,6 +186,7 @@ export default {
 
 				'bounce-slow': 'bounce-slow 3s infinite',
 				contact: 'contact 7s ease-in-out infinite',
+				glitch: 'glitch 0.35s steps(2) infinite alternate-reverse',
 			},
 						
 			colors:{
