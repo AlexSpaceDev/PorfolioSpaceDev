@@ -46,7 +46,7 @@ const Archivos: React.FC = () => {
   }
 
   return (
-    <section id="archivos" className="relative w-full lg:py-36 py-20">
+    <section id="archivos" className="relative w-full py-32">
       <div className="flex-1 w-full max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* =========================
