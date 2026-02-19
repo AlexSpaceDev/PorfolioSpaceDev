@@ -1,3 +1,7 @@
+---
+import MobileMenu from "../components/MobileMenu.tsx";
+---
+
 <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50">
   <nav class="glass-panel rounded-xl px-8 py-4 flex items-center justify-between shadow-2xl">
     
@@ -38,7 +42,7 @@
     </div>
 
     <!-- CTA -->
-    <div class="flex items-center gap-4">
+    <div class="hidden md:flex items-center gap-4">
       <a
         href="#contacto"
         class="bg-primary hover:bg-white text-background-dark px-6 py-2.5 rounded-lg text-md font-bold transition-all duration-300 shadow-[0_0_15px_rgba(0,225,255,0.3)]"
@@ -46,6 +50,9 @@
         Contáctanos
       </a>
     </div>
+
+    <!-- MOBILE MENU -->
+    <MobileMenu client:load />
 
   </nav>
 </header>
