@@ -95,21 +95,21 @@ const Archivos: React.FC = () => {
 
           <FilterButton
             active={filter === Category.GAMING}
-            icon="sports_esports"
+            icon="gamepad_left"
             label="GAMING"
             onClick={() => handleFilterChange(Category.GAMING)}
           />
 
           <FilterButton
             active={filter === Category.APPS}
-            icon="apps"
+            icon="mobile_code"
             label="APPS"
             onClick={() => handleFilterChange(Category.APPS)}
           />
 
           <FilterButton
             active={filter === Category.VR_AR}
-            icon="vrpano"
+            icon="head_mounted_device"
             label="VR/AR"
             onClick={() => handleFilterChange(Category.VR_AR)}
           />
