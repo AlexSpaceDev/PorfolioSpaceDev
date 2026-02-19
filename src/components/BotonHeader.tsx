@@ -1,3 +1,5 @@
+ {/* 
+
 import { useState } from 'preact/hooks';
 import Sidebar from './Sidebar';
 
@@ -21,19 +23,19 @@ export default function ButtonHeader() {
               isOpen ? '-translate-x-0.5 rotate-180' : ''
             }`}
           >
-            {/* Stick 1 */}
+            {/* Stick 1 *}
             <div
               className={`h-[2px] w-4 transform transition-all duration-300 origin-left bg-redWeb-200 delay-150 ${
                 isOpen ? 'rotate-[45deg] w-3/4 ' : ''
               }`}
             ></div>
-            {/* Stick 2 */}
+            {/* Stick 2 *}
             <div
               className={`h-[2px] w-4 rounded transform transition-all duration-300 bg-redWeb-200 ${
                 isOpen ? 'translate-x-10 opacity-0' : ''
               }`}
             ></div>
-            {/* Stick 3 */}
+            {/* Stick 3 *}
             <div
               className={`h-[2px] w-4 transform transition-all duration-300 origin-left bg-redWeb-200 delay-150 ${
                 isOpen ? '-rotate-[45deg] w-3/4 ' : ''
@@ -43,8 +45,10 @@ export default function ButtonHeader() {
         </div>
       </button>
 
-      {/* Render Sidebar and pass isOpen as a prop */}
+      {/* Render Sidebar and pass isOpen as a prop *}
       <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 }
+
+*/}
