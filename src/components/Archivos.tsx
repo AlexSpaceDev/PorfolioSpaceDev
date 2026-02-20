@@ -81,7 +81,7 @@ const Archivos: React.FC = () => {
         {/* =========================
             FILTROS (misma UI, con lógica)
         ========================= */}
-        <div className="flex gap-3 mb-16 overflow-x-auto pb-4 no-scrollbar">
+        <div className="flex gap-3 lg:mb-16 md:mb-16 mb-10 overflow-x-auto pb-4 no-scrollbar">
           <FilterButton
             active={filter === 'TODOS'}
             icon="grid_view"
@@ -117,6 +117,29 @@ const Archivos: React.FC = () => {
             onClick={() => handleFilterChange(Category.VR_AR)}
           />
         </div>
+
+{/* =========================
+    LEYENDA ESTADOS (SOLO MÓVIL)
+========================= */}
+<div className="flex md:hidden items-center gap-5 mb-8 text-[11px] uppercase tracking-wide opacity-70">
+  
+  <div className="flex items-center gap-2">
+    <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+    <span>En Vivo</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <span className="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+    <span>Completado</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+    <span>Prototipo</span>
+  </div>
+
+</div>
+
 
         {/* =========================
             CABECERA SEÑAL (UNA SOLA VEZ)
@@ -338,6 +361,7 @@ className="
   overflow-hidden relative
 
   md:group-hover:w-40
+  active:scale-95 md:active:scale-100
 "
                             title="Volver al inicio"
                           >
@@ -376,6 +400,7 @@ className="
 
   /* Desktop expansión */
   md:group-hover:w-40
+  active:scale-95 md:active:scale-100
 "
                             >
                               <span className="material-symbols-outlined text-xl md:absolute md:left-3.5">
