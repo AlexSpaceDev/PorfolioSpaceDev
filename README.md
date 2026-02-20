@@ -1,15 +1,32 @@
-# 🌌 SpaceDev - Página Web
+# 🌌 Space DEV - Sitio Web Oficial
 
-Este repositorio contiene la primera versión de mi página personal/proyecto **SpaceDev**, creada con **Astro**, **TailwindCSS** y componentes en **TypeScript/JSX**.  
-Mi lema: *"Lo imaginas, lo creamos"* ✨
+Donde las ideas despegan 🚀
+
+Este repositorio contiene el sitio web oficial de Space DEV, un estudio creativo enfocado en el desarrollo de páginas web, aplicaciones, videojuegos, ar/vr y otros.
+
+La web fue construida priorizando rendimiento, estructura escalable y experiencia de usuario, siguiendo una arquitectura moderna basada en componentes.
 
 ---
 
-## 🚀 Tecnologías usadas
-- [Astro](https://astro.build/) ⚡
-- [TailwindCSS](https://tailwindcss.com/) 🎨
-- TypeScript / TSX
-- Hostinger (deploy con dominio propio)
+## 🚀 Stack Tecnológico
+- ⚡ Astro — Renderizado híbrido y performance optimizado
+- ⚛️ React — Componentes interactivos
+- 🎨 TailwindCSS — Sistema de diseño utilitario
+- 🟦 TypeScript — Tipado estático y mayor robustez
+- 📩 Resend — Envío de emails desde el formulario de contacto
+- 🛰 Astro Server Actions — Backend ligero integrado en el proyecto
+- 🌐 Hostinger (deploy con dominio propio)
+
+---
+
+## ✨ Características Principales
+- Landing page optimizada para conversión
+- Sección de proyectos dinámica
+- Componentes reutilizables y modulares
+- Efectos visuales personalizados (glitch, noise, ambientación espacial)
+- Formulario de contacto funcional con envío real de correos
+- Diseño responsive y optimizado para dispositivos móviles
+- Enfoque en rendimiento y buenas prácticas
 
 ---
 
@@ -39,6 +56,16 @@ Haz una vista previa de la build:
 ```bash
 npm run preview
 ```
+---
+
+## 🔐 Variables de entorno
+Para que el formulario de contacto funcione correctamente, debes crear un archivo .env en la raíz del proyecto con:
+```bash
+RESEND_API_KEY=tu_api_key_aqui
+CONTACT_EMAIL=correo_destino@tudominio.com
+
+```
+---
 
 ## 📂 Estructura del proyecto
 
@@ -46,23 +73,35 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── public/          # Archivos estáticos (imágenes, favicon, etc.)
+├── public/                # Archivos estáticos
 ├── src/
-│   ├── components/  # Componentes reutilizables
-│   ├── layouts/     # Plantillas/layouts
-│   └── pages/       # Páginas del sitio
+│   ├── components/        # Componentes React y Astro
+│   ├── layouts/           # Layouts base
+│   ├── pages/             # Rutas del sitio
+│   ├── styles/            # Configuración global y estilos
+│   └── actions/           # Server Actions (formulario, etc.)
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 
 ```
 
-## 👀 Más información
-- Documentación oficial de Astro (https://docs.astro.build/en/getting-started/)
-- TailwindCSS Docs (https://tailwindcss.com/docs/installation/using-vite)
+## 🌍 Deploy
+El proyecto está preparado para deploy en entornos compatibles con Astro (Node o adaptadores).
+Puede desplegarse en servicios como:
+
+- Vercel
+- Netlify
+- Hostinger (Node compatible)
+- Servidores VPS
 
 ## 📖 Notas
+El sitio no es solo una vitrina, es una declaración de identidad:
+- Diseño con intención
+- Código estructurado y escalable
+- Estética espacial como narrativa visual
+- Tecnología moderna aplicada con propósito
 
-Este es solo el inicio del proyecto.
-Próximamente iré agregando mejoras, optimizaciones y nuevas secciones.
-
-## ✍️ Autor: SpaceDev
+## ✍️ Autor: Space DEV
+🌌 https://spacedev.me
 
