@@ -1,18 +1,132 @@
 ---
-import Clipboard from "./Clipboard";
+import DirectLink from '../components/DirectLink.tsx';
+import ContactForm from '../components/ContactForm.tsx';
 ---
-<div class="flex flex-col items-center gap-y-11">    
-    <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl">
-      Contacto
-    </h2>
-    <div class="flex flex-col justify-center gap-y-8">
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200">
-      ¿Tienes una idea, proyecto o colaboración en mente?
-      </h3>
-      <h3 class="text-base lg:text-xl text-center text-SpacePalette-200 [&>strong]:text-SpacePalette-600">
-      <strong>Muchas buenas ideas ven la luz</strong> comenzando con una simple conversación.
-      Si requieres ayuda o conocer más sobre nuestro trabajo, no dudes en contactarnos.
-      </h3>
+
+<section id="contacto" class="py-32 px-6 max-w-6xl mx-auto relative">
+  <!-- Background blobs -->
+  <div class="fixed top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+  <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] -z-10"></div>
+
+  <!-- Header -->
+  <div class="mb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+      </span>
+      Conexión Establecida
     </div>
-    <Clipboard client:load />
-</div>
+
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-4 leading-tight">
+      Contácta<span class="text-primary">nos</span>
+    </h1>
+
+    <p class="text-white/60 max-w-xl mx-auto text-lg font-light leading-relaxed">
+      ¡Envíanos tu señal para iniciar tu odisea digital ahora!
+    </p>
+  </div>
+
+  <!-- Formulario -->
+  <ContactForm client:load />
+
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Cuartel General -->
+    <div class="glass-panel p-6 rounded-xl border border-white/5">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+        <h5 class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+          Cuartel General
+        </h5>
+      </div>
+
+      <p class="text-sm font-light text-white/60">
+        Sector 7G, Base Lunar Uno
+      </p>
+
+      <div class="aspect-video bg-white/5 rounded-lg mt-4 overflow-hidden border border-white/10 opacity-40 group relative">
+        
+        <!-- Imagen -->
+        <div
+          class="absolute inset-0 bg-cover bg-center grayscale transition-all duration-700 group-hover:grayscale-0 scale-110"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_upYGIXVGrJ1eFy8WuvZItYeP8xKOJtNrXQnXY3aOr4rGxOeW257YitlPwGqVcstcV5lEXMyIYwHOz73ceKoADTAJ0YaeSpDNhlsAhZBZSgMsA0H6lS1i42rvR1XwWIEfWo8aY27BMduSYN7a8XRLlhzF5RTda0dCGECVRBHnQQ-kwf7NyS1Gi_rx2HATFzG31esLfSxsYazC3N5T3QTcJOLkpzP8NJFHb2yRRhVnBeBY8X6DVNcqb0TREy_LY_sJmicvMfUXJxQ");'>
+        </div>
+
+        <!-- Capa energética -->
+        <div
+          class="
+            absolute inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity duration-700
+            bg-gradient-to-r
+            from-transparent
+            via-primary/20
+            to-transparent
+            animate-[scan_3s_linear_infinite]
+            mix-blend-screen
+          ">
+        </div>
+
+        <!-- Distorsión -->
+        <div
+          class="
+            absolute inset-0
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity duration-500
+            pointer-events-none
+            backdrop-blur-[1.5px]
+            bg-white/5
+            animate-[distort_4s_ease-in-out_infinite]
+          ">
+        </div>
+
+        <!-- Contacto detectado -->
+        <span
+          class="
+            absolute
+            w-2.5 h-2.5
+            rounded-full
+            bg-yellow-200 mix-blend-screen
+            opacity-0
+            blur-[0.6px]
+            shadow-[0_0_8px_rgba(253,224,71,1),0_0_20px_rgba(253,224,71,0.8)]
+            group-hover:animate-contact
+            group-hover:opacity-100
+          "
+          style="top: 32%; left: 64%;"
+        ></span>
+      </div>
+    </div>
+
+    <!-- Enlace Directo -->
+    <DirectLink client:idle />
+
+    <!-- Disponibilidad -->
+    <div class="glass-panel p-6 rounded-xl border border-white/5 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+          <h5 class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
+            Disponibilidad
+          </h5>
+        </div>
+
+        <div class="flex items-center gap-2 mb-1">
+          <span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="text-sm font-light text-white/70">
+            Ventanas de Lanzamiento Abiertas
+          </span>
+        </div>
+
+        <p class="text-[9px] uppercase tracking-widest text-white/30 ml-4">
+          Aceptando nuevas misiones
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>

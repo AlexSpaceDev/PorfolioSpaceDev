@@ -1,5 +1,7 @@
-import { useEffect, useRef } from 'preact/hooks';
+
 /*import ThemeIcon from './icons/ThemeIcon';*/ // Asegúrate que esté en formato TSX o exportado correctamente
+
+{/*
 import BotonHeader from './BotonHeader';
 
 export default function Header() {
@@ -49,22 +51,22 @@ navLinks.forEach(link => {
   return (
     <header class="fixed top-10 z-20 w-full">
       <div class="max-w-screen-xl mx-auto flex justify-center items-center">
-        {/* Menú para pantallas grandes */}
+        {/* Menú para pantallas grandes 
         <nav class="hidden lg:flex sm:flex md:flex relative flex-row items-center lg:gap-x-10 md:gap-x-10 gap-x-5 text-SpacePalette-200">
-          {/* Fondo ajustado con z-index */}
+          {/* Fondo ajustado con z-index 
           <div
             ref={headerBgRef}
             class="absolute -inset-x-4 z-0 rounded-full bg-slate-900/80 opacity-0 transition-opacity duration-300 py-5"
           ></div>
 
-          {/* Enlaces y ThemeIcon con z-index más alto */}
+           Enlaces y ThemeIcon con z-index más alto 
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#inicio">Inicio</a>
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#proyectos">Proyectos</a>
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#nuestro-equipo">Nuestro Equipo</a>
           <a class="relative z-10 transition hover:text-SpacePalette-600" href="#contacto">Contacto</a>
         </nav>
 
-        {/* Botón para móvil */}
+        {/* Botón para móvil 
         <div class="block sm:hidden">
           <BotonHeader />
         </div>
@@ -73,6 +75,7 @@ navLinks.forEach(link => {
   );
 }
 
+*/}
 
 
 

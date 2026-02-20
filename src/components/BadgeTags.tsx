@@ -1,3 +1,5 @@
+/*
+
 import type { h, JSX } from 'preact';
 
 interface BadgeTagsProps {
@@ -16,3 +18,4 @@ export default function BadgeTags({ children, bgColor = "bg-blue-100 text-blue-8
     </span>
   );
 }
+*/

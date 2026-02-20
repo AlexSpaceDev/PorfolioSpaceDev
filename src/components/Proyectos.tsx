@@ -1,3 +1,5 @@
+/*
+
 import { h } from 'preact';
 import { useState, useRef } from 'preact/hooks';
 import Buttons from '../components/Buttons';
@@ -80,7 +82,7 @@ export default function Proyectos() {
     >
       <Buttons onTabChange={handleTabChange} selectedTab={selectedTab}/>
 
-      {/* Exit animation for previous tab */}
+      {/* Exit animation for previous tab }
       {isTransitioning && prevTab && (
         <div
           key={`out-${prevTab}`}
@@ -181,7 +183,7 @@ export default function Proyectos() {
         </div>
       )}
 
-      {/* Entrance animation for current tab */}
+      {/* Entrance animation for current tab}
       {!isTransitioning && (
         <div
           key={`in-${selectedTab}`}
@@ -284,3 +286,5 @@ export default function Proyectos() {
     </div>
   );
 }
+
+*/

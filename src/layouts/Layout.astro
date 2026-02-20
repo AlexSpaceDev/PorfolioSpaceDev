@@ -1,16 +1,25 @@
 ---
-import '@fontsource/kodchasan/400.css';
-import '@fontsource/kodchasan/600.css';
-import '@fontsource/kodchasan/700.css';
+import '../styles/globals.css';
+import '../styles/effects.css';
+
+import '@fontsource/space-grotesk/300.css';
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/600.css';
+import '@fontsource/space-grotesk/700.css';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.astro';
+import 'material-symbols';
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { Starfield } from "../components/effects/Starfield";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { description, title } = Astro.props;
@@ -18,59 +27,70 @@ const { description, title } = Astro.props;
 
 <!doctype html>
 <html lang="es" class="overflow-x-hidden">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	
-	<body class="relative bg-gradient-to-b from-[#0e1014] via-[#111825] to-[#132c64] min-h-screen overflow-x-hidden">
-		
-		<Header client:load/>
-		<!-- Pseudo-elemento para estrellas -->
-		<div class="pointer-events-none absolute inset-0 bg-[url('/svgs/stars.svg')] bg-repeat bg-[length:200px_200px] opacity-20 z-0"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
 
-		<div class="pointer-events-none absolute inset-0 bg-[url('/svgs/stars-2.svg')] bg-repeat bg-[length:250px_250px] opacity-50 z-0"></div>	  						
-		
-		<slot />
-	</body>
+  <body class="relative min-h-screen overflow-x-hidden bg-background-dark text-white font-sans">
 
+    <!-- HEADER -->
+    <Header />
 	
+	<!-- Fondo nebular -->
+    <div class="fixed inset-0 z-0 nebula-glow"></div>
+
+    <!-- Campo de estrellas -->
+    <Starfield client:only="react" />
+
+    <!-- Contenido de la página -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <slot />
+      <Footer />
+    </div>
+
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: light;
-	}
+  :root {
+    color-scheme: dark;
+  }
 
-	html {
-		font-family: 'Kodchasan', system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
+  html {  
+    scroll-behavior: smooth;
+  }
 
-	h1 {
-		font-family: 'Kodchasan', sans-serif;
-		font-weight: 700;
-	}
-	
-	h2 {
-		font-family: 'Kodchasan', sans-serif;
-		font-weight: 600;
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-	body {	
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  .data-stream-text {
+    @apply font-mono text-[10px] tracking-widest uppercase text-primary/60;
+  }
 
-	@media {prefers-reduced-motion: reduce} {
-		html {
-			scroll-behavior: smooth;
-		}
-	}
+  .social-icon-glow {
+    @apply transition-all duration-300 hover:text-primary;
+    filter: drop-shadow(0 0 2px rgba(0, 225, 255, 0.3));
+  }
 
+  .mission-type-card.active {
+    @apply border-primary bg-primary/10;
+  }
+
+  .mission-type-card.active span.material-symbols-outlined {
+    @apply text-primary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>

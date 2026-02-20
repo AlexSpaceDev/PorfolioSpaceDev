@@ -1,15 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Proyectos from '../components/Proyectos.tsx';
-import Footer from '../components/Footer.astro';
-import TopSection from '../components/TopSection.tsx';
-import InicioSection from '../components/InicioSection';
-import NuestroEquipoSection from '../components/NuestroEquipoSection.astro';
-import ContactoSection from '../components/Contacto.astro';
-import Clipboard from '../components/Clipboard';
-import FadeIn from '../components/FadeIn.tsx';
-
+import Hero from '../components/Hero.astro';
+import Manifiesto from '../components/Manifiesto.astro';
+import Matriz from '../components/Matriz.astro';
+import Archivos from '../components/Archivos.tsx';
+import Tripulacion from '../components/Tripulacion.astro';
+import Contacto from '../components/Contacto.astro';
+import { FAQ } from '../components/FAQ.tsx';
+export const prerender = false;
 ---
 
 <Layout 
@@ -19,47 +17,19 @@ import FadeIn from '../components/FadeIn.tsx';
   <main class="z-10">
     
     <!-- Hero / Top -->
-    <SectionContainer id="top" class="flex items-center flex-col lg:gap-24 gap-10 lg:pt-52 pt-48 pb-32">
-      <TopSection client:load />
-    </SectionContainer>
-    
-    <!-- Inicio -->
-    <SectionContainer id="inicio" class="py-16 gap-x-14 gap-y-24">
-      <FadeIn client:load>
-        <InicioSection client:load />
-      </FadeIn>
-    </SectionContainer>
-
-    <!-- Proyectos -->
-    <SectionContainer id="proyectos" class="py-16">
-      <FadeIn client:load>
-      <div class="flex justify-center">
-        <h2 class="text-SpacePalette-200 lg:text-5xl text-4xl pb-12 lg:pt-10">
-          Proyectos
-        </h2>
-      </div>
-      <Proyectos client:load />
-      </FadeIn>
-    </SectionContainer>
-    
-    <!-- Nuestro Equipo -->
-    <SectionContainer id="nuestro-equipo" class="flex flex-col items-center justify-center py-16 lg:py-44 gap-y-24">
-      <FadeIn client:load>
-      <NuestroEquipoSection /> 
-      </FadeIn>
-    </SectionContainer>
-
+    <Hero />
+    <!-- Manifiesto -->
+    <Manifiesto />
+    <!-- Matriz -->
+    <Matriz />
+    <!-- Archivos -->
+    <Archivos client:load/>
+    <!-- Equipo -->
+    <Tripulacion />
+    <!-- FAQ -->
+    <FAQ client:load/>
     <!-- Contacto -->
-    <SectionContainer id="contacto" bgClass="bg-black bg-opacity-60" class="py-16 lg:py-24">
-      <FadeIn client:load>
-      <ContactoSection />
-      </FadeIn>
-    </SectionContainer>
-
-    <!-- Footer -->
-    <SectionContainer bgClass="bg-black bg-opacity-60" class="pb-10">
-    <Footer />
-    </SectionContainer>
+    <Contacto />
 
   </main>
 </Layout>

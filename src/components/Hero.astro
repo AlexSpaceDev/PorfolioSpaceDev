@@ -1,0 +1,168 @@
+
+<section id="inicio" class="relative w-full pt-44 pb-32 px-6">
+  <div class="flex items-center justify-center">
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Columna izquierda -->
+      <div class="lg:col-span-8 space-y-">
+
+        <!-- Estado -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-[10px] uppercase tracking-[0.2em] font-bold">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          SISTEMA EN LÍNEA: V3.0.0
+        </div>
+
+        <!-- Título -->
+        <div class="mt-6">
+          <h1 class="text-7xl md:text-8xl font-bold leading-[0.9] tracking-tight">
+            SPACE
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cosmic-violet">
+              DEV
+            </span>
+          </h1>
+
+          <!-- Slogan -->
+           <div class="flex flex-row items-center mt-2 gap-4 md:gap-6">
+              <p class="text-2xl md:text-3xl italic tracking-widest text-primary glow-text align-text">Donde las ideas despegan
+              </p>
+
+              <span class="material-symbols-outlined text-primary text-sm">
+                  rocket_launch
+                </span> 
+            </div>
+        </div>
+
+        <!-- Desarrollo -->
+        <p class="mt-8 mb-8 text-lg md:text-xl text-gray-400 max-w-xl font-light leading-relaxed text-pretty">
+          Transformamos ideas en productos digitales reales.
+          Desde páginas web hasta aplicaciones diseñadas para crecer y evolucionar.
+        </p>
+
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a 
+            href="#archivos"
+            class="group flex items-center gap-2 bg-primary text-background-dark px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(0,225,255,0.2)]">
+            Explorar Proyectos
+            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+              arrow_forward
+            </span>
+          </a>
+
+          <a
+            href="#manifiesto"
+            class="group flex items-center gap-2 border border-white/10 hover:border-primary/50 bg-white/5 px-8 py-4 rounded-xl text-lg font-bold transition-all backdrop-blur-sm"
+          >
+            Ver Manifiesto
+            <span class="material-symbols-outlined text-primary">
+              terminal
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="lg:col-span-4 hidden lg:flex flex-col gap-6">
+
+        <!-- Estado del nodo -->
+        <div class="glass-panel p-6 rounded-xl space-y-4">
+          <div class="flex justify-between items-center border-b border-white/10 pb-2">
+            <span class="text-[10px] uppercase tracking-widest text-primary font-bold">
+              ESTADO DEL NODO
+            </span>
+            <span class="material-symbols-outlined text-xs text-primary">
+              sensors
+            </span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">LATENCIA_MS</span>
+              <span class="data-stream-text text-primary">0.0012</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">SINC_NÚCLEO</span>
+              <span class="data-stream-text text-primary">99.9%</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="data-stream-text text-gray-500 uppercase">RENDIMIENTO</span>
+              <span class="data-stream-text text-primary">4.2 TB/S</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card proyecto -->
+        <div class="relative aspect-square rounded-xl overflow-visible border border-white/5 bg-gradient-to-br from-white/5 to-transparent group p-4 flex flex-col justify-around">
+
+          <!-- Pantalla / Preview -->
+          <div class="relative z-10 w-full aspect-[3/2] rounded-xl overflow-hidden border border-primary/30 bg-black/50">
+
+            <!-- Imagen (BASE) -->
+            <div
+              class="absolute inset-0 z-10
+                    bg-[url('/projectsApps/PA_Pets.webp')]
+                    bg-cover bg-center
+                    transition-all duration-700
+                    opacity-[0.4] grayscale
+                    group-hover:opacity-100
+                    group-hover:grayscale-0
+                    group-hover:scale-110
+                    group-hover:skew-x-[0.5deg]">
+            </div>
+
+            <!-- Overlay azul / señal -->
+            <div class="absolute inset-0 z-20 bg-primary/15"></div>
+
+            <!-- Scanlines -->
+            <div class="absolute inset-0 z-30
+                        bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                        bg-[length:100%_4px]
+                        opacity-30">
+            </div>
+
+            <!-- Glitch (interferencia vertical) -->
+            <div class="absolute inset-0 z-40 pointer-events-none
+                        bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,225,255,0.2)_50%,transparent_100%)]
+                        bg-[length:100%_6px]
+                        animate-glitch
+                        opacity-60
+                        mix-blend-screen">
+            </div>
+
+            <!-- Glow de pantalla (MARCO FINAL) -->
+            <div class="absolute inset-0 z-60
+                        ring-1 ring-primary/40
+                        shadow-[0_0_35px_rgba(0,225,255,0.25)]">
+            </div>
+
+          </div>
+
+          <!-- Info del proyecto (controles) -->
+          <div class="glass-panel rounded-lg p-4 flex items-center gap-4 z-20">
+            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-sm">
+                phone_iphone
+              </span>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-400 uppercase tracking-tighter">
+                PROYECTO ACTUAL
+              </p>
+              <p class="text-xs font-bold uppercase tracking-widest">
+                PROTOCOLO PETS
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
