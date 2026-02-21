@@ -284,7 +284,7 @@ const Archivos: React.FC = () => {
                           <span className="text-[11px] uppercase tracking-tighter opacity-80">
                             Estado
                           </span>
-<div className="flex items-center mt-1">
+<div className="flex items-center lg:mt-0 md:mt-0 mt-1">
   {/* Punto móvil */}
   <span
     className={`
