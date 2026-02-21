@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Manifiesto from '../components/Manifiesto.astro';
+import Matriz from '../components/Matriz.astro';
+import Archivos from '../components/Archivos.tsx';
+import Tripulacion from '../components/Tripulacion.astro';
+import Contacto from '../components/Contacto.astro';
+import { FAQ } from '../components/FAQ.tsx';
+export const prerender = false;
+---
+
+<Layout 
+  title="SPACE DEV - Sitio Oficial"
+  description="Recurre a SPACE DEV para crear tu aplicación, página web, videojuego o cualquier experiencia interactiva que requira tu proyecto. Somos un equipo de desarrolladores apasionados por la innovación y la creación, listos para llevar tus ideas al siguiente nivel."
+>
+  <main class="z-10">
+    
+    <!-- Hero / Top -->
+    <Hero />
+    <!-- Manifiesto -->
+    <Manifiesto />
+    <!-- Matriz -->
+    <Matriz />
+    <!-- Archivos -->
+    <Archivos client:load/>
+    <!-- Equipo -->
+    <Tripulacion />
+    <!-- FAQ -->
+    <FAQ client:load/>
+    <!-- Contacto -->
+    <Contacto />
+
+  </main>
+</Layout>
+
+
+
