@@ -20,7 +20,7 @@ export default function ContactForm() {
     return () => clearTimeout(timer);
   }, [status]);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const form = e.currentTarget;

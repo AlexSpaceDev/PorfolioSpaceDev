@@ -45,9 +45,6 @@ const Archivos: React.FC = () => {
     setExpanded(false);
   }
 
-  const [activeCard, setActiveCard] = useState<string | null>(null);
-
-
   return (
     <section id="archivos" className="relative w-full py-32">
       <div className="flex-1 w-full max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
@@ -118,28 +115,27 @@ const Archivos: React.FC = () => {
           />
         </div>
 
-{/* =========================
-    LEYENDA ESTADOS (SOLO MÓVIL)
-========================= */}
-<div className="flex md:hidden items-center gap-5 mb-8 text-[11px] uppercase tracking-wide opacity-70">
-  
-  <div className="flex items-center gap-2">
-    <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-    <span>En Vivo</span>
-  </div>
+        {/* =========================
+            LEYENDA ESTADOS (SOLO MÓVIL)
+        ========================= */}
+        <div className="flex md:hidden items-center gap-5 mb-8 text-[11px] uppercase tracking-wide opacity-70">
+          
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+            <span>En Vivo</span>
+          </div>
 
-  <div className="flex items-center gap-2">
-    <span className="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
-    <span>Completado</span>
-  </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+            <span>Completado</span>
+          </div>
 
-  <div className="flex items-center gap-2">
-    <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
-    <span>Prototipo</span>
-  </div>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span>Prototipo</span>
+          </div>
 
-</div>
-
+        </div>
 
         {/* =========================
             CABECERA SEÑAL (UNA SOLA VEZ)
@@ -192,8 +188,7 @@ const Archivos: React.FC = () => {
                   className="flex flex-col gap-4"
                 >
 
-<div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
-
+                <div className="relative group aspect-[16/10] rounded-2xl overflow-hidden glass-card">
 
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -208,33 +203,31 @@ const Archivos: React.FC = () => {
                         {project.title}
                       </h3>
 
-<div
-  className="
-    flex gap-2
-    overflow-hidden
+                      <div
+                        className="
+                          flex gap-2
+                          overflow-hidden
 
-    /* Transición */
-    transition-[max-height,opacity,margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+                          /* Transición */
+                          transition-[max-height,opacity,margin] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
 
-    /* Estado base móvil */
-    max-h-20 opacity-100 mb-4
+                          /* Estado base móvil */
+                          max-h-20 opacity-100 mb-4
 
-    /* Hover SOLO móvil */
-    group-hover:max-h-0
-    group-hover:opacity-0
-    group-hover:mb-0
+                          /* Hover SOLO móvil */
+                          group-hover:max-h-0
+                          group-hover:opacity-0
+                          group-hover:mb-0
 
-    /* Desktop reset completo */
-    md:max-h-none
-    md:opacity-100
-    md:mb-4
-    md:group-hover:max-h-none
-    md:group-hover:opacity-100
-    md:group-hover:mb-4
-  "
->
-
-
+                          /* Desktop reset completo */
+                          md:max-h-none
+                          md:opacity-100
+                          md:mb-4
+                          md:group-hover:max-h-none
+                          md:group-hover:opacity-100
+                          md:group-hover:mb-4
+                        "
+                      >
 
                         {project.tags.map(tag => (
                           <span
@@ -252,71 +245,71 @@ const Archivos: React.FC = () => {
                     </div>
 
                     <div
-  className="
-    flex items-center justify-between
-    shrink-0
+                      className="
+                        flex items-center justify-between
+                        shrink-0
 
-    /* Base móvil: colapsado real */
-    max-h-0 opacity-0 translate-y-6 overflow-hidden
+                        /* Base móvil: colapsado real */
+                        max-h-0 opacity-0 translate-y-6 overflow-hidden
 
-    /* Animación */
-    transition-[max-height,opacity,transform] duration-500 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)]
+                        /* Animación */
+                        transition-[max-height,opacity,transform] duration-500 delay-100 ease-[cubic-bezier(0.22,1,0.36,1)]
 
-    /* Hover móvil */
-    group-hover:max-h-48
-    group-hover:opacity-100
-    group-hover:-translate-y-0
+                        /* Hover móvil */
+                        group-hover:max-h-48
+                        group-hover:opacity-100
+                        group-hover:-translate-y-0
 
-    /* Desktop reset */
-    md:max-h-none
-    md:opacity-0
-    md:translate-y-6
-    md:overflow-visible
+                        /* Desktop reset */
+                        md:max-h-none
+                        md:opacity-0
+                        md:translate-y-6
+                        md:overflow-visible
 
-    md:group-hover:max-h-none
-    md:group-hover:opacity-100
-    md:group-hover:translate-y-0
-  "
->
+                        md:group-hover:max-h-none
+                        md:group-hover:opacity-100
+                        md:group-hover:translate-y-0
+                      "
+                    >
 
                       <div className="flex gap-4">
                         <div className="flex flex-col">
                           <span className="text-[11px] uppercase tracking-tighter opacity-80">
                             Estado
                           </span>
-<div className="flex items-center lg:mt-0 md:mt-0 mt-1">
-  {/* Punto móvil */}
-  <span
-    className={`
-      block md:hidden
-      w-2.5 h-2.5 rounded-full
-      ${
-        project.status === 'En Vivo'
-          ? 'bg-green-400'
-          : project.status === 'Completado'
-          ? 'bg-blue-400'
-          : 'bg-amber-400'
-      }
-    `}
-  ></span>
+                          <div className="flex items-center lg:mt-0 md:mt-0 mt-1">
+                            {/* Punto móvil */}
+                            <span
+                              className={`
+                                block md:hidden
+                                w-2.5 h-2.5 rounded-full
+                                ${
+                                  project.status === 'En Vivo'
+                                    ? 'bg-green-400'
+                                    : project.status === 'Completado'
+                                    ? 'bg-blue-400'
+                                    : 'bg-amber-400'
+                                }
+                              `}
+                            ></span>
 
-  {/* Texto desktop */}
-  <span
-    className={`
-      hidden md:block
-      text-xs font-bold uppercase
-      ${
-        project.status === 'En Vivo'
-          ? 'text-green-400'
-          : project.status === 'Completado'
-          ? 'text-blue-400'
-          : 'text-amber-400'
-      }
-    `}
-  >
-    {project.status}
-  </span>
-</div>
+                            {/* Texto desktop */}
+                            <span
+                              className={`
+                                hidden md:block
+                                text-xs font-bold uppercase
+                                ${
+                                  project.status === 'En Vivo'
+                                    ? 'text-green-400'
+                                    : project.status === 'Completado'
+                                    ? 'text-blue-400'
+                                    : 'text-amber-400'
+                                }
+                              `}
+                            >
+                              {project.status}
+                            </span>
+                          </div>
 
                         </div>
                         <div className="flex flex-col">
@@ -351,34 +344,34 @@ const Archivos: React.FC = () => {
                               const el = document.querySelector(project.url!);
                               el?.scrollIntoView({ behavior: 'smooth' });
                             }}
-className="
-  bg-primary hover:bg-white
-  text-background-dark
-  h-12 w-12 md:w-12
-  rounded-lg
-  flex items-center justify-center
-  transition-all
-  overflow-hidden relative
+                          className="
+                            bg-primary hover:bg-white
+                            text-background-dark
+                            h-12 w-12 md:w-12
+                            rounded-lg
+                            flex items-center justify-center
+                            transition-all
+                            overflow-hidden relative
 
-  md:group-hover:w-40
-  active:scale-95 md:active:scale-100
-"
+                            md:group-hover:w-40
+                            active:scale-95 md:active:scale-100
+                          "
                             title="Volver al inicio"
                           >
                             <span className="material-symbols-outlined text-xl md:absolute md:left-3.5">
                               Public
                             </span>
-<span
-  className="
-    hidden md:block
-    ml-8 opacity-0
-    md:group-hover:opacity-100
-    transition-opacity
-    font-bold uppercase text-xs whitespace-nowrap
-  "
->
-  Esta Misión
-</span>
+                            <span
+                              className="
+                                hidden md:block
+                                ml-8 opacity-0
+                                md:group-hover:opacity-100
+                                transition-opacity
+                                font-bold uppercase text-xs whitespace-nowrap
+                              "
+                            >
+                              Esta Misión
+                            </span>
 
                           </button>
                         ) : (
@@ -390,33 +383,33 @@ className="
                           >
                             <button
                               className="
-  bg-primary hover:bg-white
-  text-background-dark
-  h-12 w-12 md:w-12
-  rounded-lg
-  flex items-center justify-center
-  transition-all
-  overflow-hidden relative
+                                bg-primary hover:bg-white
+                                text-background-dark
+                                h-12 w-12 md:w-12
+                                rounded-lg
+                                flex items-center justify-center
+                                transition-all
+                                overflow-hidden relative
 
-  /* Desktop expansión */
-  md:group-hover:w-40
-  active:scale-95 md:active:scale-100
-"
+                                /* Desktop expansión */
+                                md:group-hover:w-40
+                                active:scale-95 md:active:scale-100
+                              "
                             >
                               <span className="material-symbols-outlined text-xl md:absolute md:left-3.5">
                                 travel_explore
                               </span>
-<span
-  className="
-    hidden md:block
-    ml-8 opacity-0
-    md:group-hover:opacity-100
-    transition-opacity
-    font-bold uppercase text-xs whitespace-nowrap
-  "
->
-  Explorar Archivo
-</span>
+                              <span
+                                className="
+                                  hidden md:block
+                                  ml-8 opacity-0
+                                  md:group-hover:opacity-100
+                                  transition-opacity
+                                  font-bold uppercase text-xs whitespace-nowrap
+                                "
+                              >
+                                Explorar Archivo
+                              </span>
 
                             </button>
                           </a>
