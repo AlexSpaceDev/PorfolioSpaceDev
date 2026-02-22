@@ -5,7 +5,6 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   output: 'server',
-  site: "https://porfolio-space-dev.vercel.app",
   adapter: vercel({
     webAnalytics: {
       enabled: false
