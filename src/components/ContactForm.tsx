@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { actions } from "astro:actions";
 
 export default function ContactForm() {
   const [missionType, setMissionType] = useState("web");
@@ -55,7 +56,7 @@ export default function ContactForm() {
     setStatus("sending");
 
     try {
-      const res = await fetch("/_actions/submitContact", {
+      const res = await fetch(actions.submitContact, {
         method: "POST",
         body: formData,
       });
