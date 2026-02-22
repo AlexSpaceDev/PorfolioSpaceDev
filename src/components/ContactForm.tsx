@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { actions } from "astro:actions";
 
 
 export default function ContactForm() {
@@ -56,12 +57,9 @@ export default function ContactForm() {
     setStatus("sending");
 
     try {
-      const res = await fetch("/_actions/submitContact", {
-        method: "POST",
-        body: formData,
-      });
+    const { error } = await actions.submitContact(formData);
 
-      if (!res.ok) throw new Error("Error en envío");
+    if (error) throw new Error(error.message);
 
       setStatus("sent");
     } catch {
