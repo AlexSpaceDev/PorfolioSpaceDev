@@ -23,22 +23,24 @@ import { actions } from "astro:actions";
 
     <h1>Test Form</h1>
 
-    <form method="POST" action="/_actions/submitContact">
-      <input type="text" name="name" value="Test User" />
-      <input type="email" name="email" value="test@test.com" />
-      
-      <select name="mission_type">
-        <option value="web">web</option>
-        <option value="gaming">gaming</option>
-        <option value="apps">apps</option>
-        <option value="arvr">arvr</option>
-        <option value="other">other</option>
-      </select>
+<form method="POST" action={actions.submitContact}>
+  <input type="text" name="name" value="Test User" />
+  <input type="email" name="email" value="test@test.com" />
+  
+  <select name="mission_type">
+    <option value="web">web</option>
+    <option value="gaming">gaming</option>
+    <option value="apps">apps</option>
+    <option value="arvr">arvr</option>
+    <option value="other">other</option>
+  </select>
 
-      <textarea name="message">Este es un mensaje de prueba suficientemente largo</textarea>
+  <textarea name="message">
+Este es un mensaje de prueba suficientemente largo
+  </textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
+  <button type="submit">Enviar</button>
+</form>
 
     <!-- Manifiesto -->
     <Manifiesto />
