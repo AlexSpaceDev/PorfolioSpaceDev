@@ -21,9 +21,7 @@ export default function ContactForm() {
     return () => clearTimeout(timer);
   }, [status]);
 
-  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
-    e.preventDefault();
-
+  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
@@ -45,48 +43,39 @@ export default function ContactForm() {
       newErrors.message = "Describe la misión con al menos 10 caracteres";
     }
 
-    // 🚫 Si hay errores, NO se envía
+    // 🚫 Si hay errores, bloqueamos envío
     if (Object.keys(newErrors).length > 0) {
+      e.preventDefault();
       setErrors(newErrors);
       return;
     }
 
-    // ✅ Todo OK → seguimos flujo normal
+    // ✅ Todo OK → dejamos que el form se envíe normal
     setErrors({});
     setStatus("sending");
-
-    try {
-      const res = await fetch(actions.submitContact, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!res.ok) throw new Error("Error en envío");
-
-      setStatus("sent");
-    } catch {
-      setStatus("error");
-    }
   }
-
 
   return (
     <div className="relative">
-      {showForm && (
+      {showForm && ( 
         <form
+          method="POST"
+          action={actions.submitContact}
           onSubmit={handleSubmit}
           className={`
             transition-all duration-500 ease-out
-            ${status === "sent"
-              ? "opacity-0 scale-[0.98] blur-sm pointer-events-none"
-              : "opacity-100 scale-100 blur-0"}
+            ${
+              status === "sent"
+                ? "opacity-0 scale-[0.98] blur-sm pointer-events-none"
+                : "opacity-100 scale-100 blur-0"
+            }
           `}
         >
-        <div className="glass-panel rounded-2xl relative overflow-hidden">
-          <div className="scanline"></div>
+          <div className="glass-panel rounded-2xl relative overflow-hidden">
+            <div className="scanline"></div>
 
-          <div className="p-8 md:p-10 space-y-16">
-            {/* ===================== SECCIÓN 01 ===================== */}
+            <div className="p-8 md:p-10 space-y-16">
+              {/* ===================== SECCIÓN 01 ===================== */}
             <section className="space-y-4">
               <div className="flex items-center gap-3 mb-6">
                 <span className="size-6 flex items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] opacity-40 border border-primary/20">
