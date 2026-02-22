@@ -6,9 +6,10 @@ import react from '@astrojs/react';
 export default defineConfig({
   output: 'server',
   adapter: vercel({
-    webAnalytics: {
-      enabled: false
-    }
+    webAnalytics: { enabled: false }
   }),
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  security: {
+    checkOrigin: false
+  }
 });
